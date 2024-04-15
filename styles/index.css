@@ -1,0 +1,39 @@
+/* css디자인 */
+/* #top {background-color:aqua;}
+#top main {background-color:yellow;}
+#top main h1 {background-color:lime;}
+#top main p {} */
+.title {background-color: lime;}
+.title h1 {color: red;}
+.title .txt_wrap {background-color: aquamarine;}
+.title .txt_wrap .txt_1 {background-color: skyblue;}
+.title .txt_wrap .txt_1 .sub_title {color: navy;}
+.title .txt_wrap .txt_1 .name {color:blue}
+/* 선택자연습-2 */
+#weather {}
+#weather h1 {}
+#weather .area {}
+#weather .temperature {}
+#weather p {}
+#weather .sub_title {}
+#weather .humidity {}
+#weather .dust {}
+#weather .result {color: red;}
+/* 선택자연습-3 */
+#news {}
+#news > a {background-color: yellow;}
+#news .box {}
+#news .box a {}
+#news .box a h2 {}
+#news .box a p {}
+#news > p {}
+#news p span {color: red;}
+/* 선택자연습-4 */
+#papago {}
+#papago nav {}
+#papago nav a {}
+#papago main {}
+#papago main h1 {}
+#papago main h1 a {color: red;}
+#papago main > a {background-color:yellow;}
+#papago > a {color: green;}
