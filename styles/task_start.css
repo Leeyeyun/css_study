@@ -1,0 +1,77 @@
+/* ver0 */
+body > h1 {}
+.test_box {}
+.test_box h1 {}
+.test_box h2 {}
+.test_box h3 {}
+.test_box h4 {}
+.test_box #title1 {}
+.test_box #title2 {}
+.test_box > p {}
+.test_box blockquote {}
+.test_box p span {}
+.test_box p q {}
+.test_box p code {}
+.test_box p sup {}
+.test_box p sub {}
+.test_box .test1 {}
+.test_box .test2 {}
+.test_box .test3.test {}
+.test_box .test4.test {}
+.test_box #wrap {}
+.test_box #wrap > p {}
+hr {}
+
+/* ver1 */
+h1 {}
+header {}
+header > h1 {}
+header form {}
+header form input {}
+header a {}
+hr {}
+
+/* ver2 */
+h1 {}
+.box {}
+.box a {}
+.box a > span {}
+.box .contents {}
+.box .contents p {}
+.box .img {}
+.box .img img {}
+hr {}
+
+/* ver3 */
+h1 {}
+main {}
+main aside {}
+main aside h2 {}
+main aside ul {}
+main aside ul li {}
+main aside ul li a {}
+main aside ul li .last {}
+main aside ul li .last a {}
+main section {}
+main section > .top {}
+main section > .top h1 {}
+main section > .top p {}
+main section article {}
+main section article p {}
+hr {}
+
+/* ver4 */
+h1 {}
+#t {}
+thead {}
+thead tr {}
+thead tr th {}
+tbody {}
+tbody tr {}
+tbody tr td {}
+tbody tr td span {}
+tfoot {}
+tfoot tr {}
+tfoot tr th {}
+tfoot tr td {}
+tfoot tr td em {}
