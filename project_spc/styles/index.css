@@ -1,0 +1,38 @@
+/* title */
+main {
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:center;
+}
+main .title {}
+main .title h1 {
+    font-family:"Nanum Myeongjo", serif;
+    font-size:3.125rem;
+    font-weight:800;
+    padding-bottom:14px;
+}
+main .title > p {
+    letter-spacing:-0.2px;
+    font-weight:300;
+    padding-bottom:40px;
+}
+/* contents */
+main .contents_bg {
+    background-color:#f5f5f5;
+    padding-top:40px;
+}
+main .contents_bg .contents {}
+main .contents_bg .contents p {
+    letter-spacing:-0.2px;
+    line-height:30px;
+    padding-bottom:30px;
+}
+/* vision */
+main .contents_bg .vision {}
+main .contents_bg .vision h2 {
+    font-size:1.875rem;
+    letter-spacing:-0.2px;
+    color:#36B4E5;
+    padding-top:80px;
+    padding-bottom:30px;
+}
+main .contents_bg .vision p {font-size:2.188rem; line-height:45px;}
