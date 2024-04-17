@@ -72,14 +72,17 @@ main .contents_bg .strategy .strategy_contents li {
     width:180px; height:180px;
     padding-top:42px;
     border-radius:50%;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.25);
 }
+main .contents_bg .strategy .strategy_contents .smart {padding-top:30px;}
 main .contents_bg .strategy .strategy_contents li h3 {
     font-size:1.25rem;
     font-weight:500;
     padding-bottom:20px;
 }
+main .contents_bg .strategy .strategy_contents .smart h3 {padding-bottom:15px;}
 main .contents_bg .strategy .strategy_contents li p {
     color:#8A8A8A;
     font-weight:400;
-    padding-bottom:20px;
+    line-height:23px;
 }
