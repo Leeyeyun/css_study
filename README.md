@@ -62,3 +62,27 @@
 * `text-align` : 왼쪽, 가운데, 오른쪽 정렬
 * `font-weight` : 폰트 두께 설정, 주로 100단위로 두께가 분류됨
 * `padding-top/bottom` : 글자 위/아래 간격 조정
+# 24.04.17
+## box css
+### display
+* `block, inline, inline-block`
+* 특정 태그가 화면에 어떻게 표시될지 지정하는 속성
+* `block` : 새로운 행, 크기, 여백 인식
+* `inline` : 내용만큼 크기 인식(그 외 크기 인식 불가능)
+* `inline-block` : 내용만큼 크기 인식(크기 추가 설정 가능), 옆으로 정렬
+### box-sizing
+* `box-sizing:border-box`
+* 요소의 너비와 높이를 계산할 때 테두리, 여백(padding)까지 포함해서 계산하는 속성
+* 속성 미적용 시 : w100 + h100 + padding-top20 = 100x120
+* 속성 적용 시 : w100 + h100 + padding-top20 = 100x100
+### width, height
+* 요소의 너비와 높이
+* 절대값px, 상대값%, 화면 상대값 vw, vh
+* 상대값 처리는 0~100% 사이 값만 사용한다.
+### border-radius
+* `border-radius` : 코너를 라운드처리, 정사각형을 원으로 변형 가능
+* 부모의 절반인 상대값 50% 적용하여 원모양으로 변경
+### box-shadow
+* figma drop-shadow = css box-shadow
+* box shadow:xpx ypx blur값 색상;
+* 띄어쓰기로 수치 나열, 투명도를 주고 싶을 때는 색상을 rgba로 표현
