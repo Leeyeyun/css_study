@@ -28,7 +28,8 @@ main .contents_bg .contents p {
 }
 /* vision */
 main .contents_bg .vision {}
-main .contents_bg .vision h2 {
+main .contents_bg .vision h2,
+main .contents_bg .goal h2 {
     font-size:1.875rem;
     letter-spacing:-0.2px;
     color:#36B4E5;
@@ -36,3 +37,34 @@ main .contents_bg .vision h2 {
     padding-bottom:30px;
 }
 main .contents_bg .vision p {font-size:2.188rem; line-height:45px;}
+/* goal */
+main .contents_bg .goal {}
+main .contents_bg .goal h2 {
+    font-size:1.875rem;
+    color:#36B4E5;
+}
+main .contents_bg .goal .goal_contents {/* text-align:right; */}
+main .contents_bg .goal .goal_contents li {
+    width:250px; height:250px;
+    display:inline-block;
+    padding-top:67px;
+    border-radius:50%;
+    box-shadow:0px 0px 6px rgba(0,0,0,0.25);
+    /* figma drop-shadow == css box-shadow */
+    /* box-shadow:x축 y축 blur값 색상; */
+    /* text-align:center; */
+}
+/* 각 li 배경 */
+main .contents_bg .goal .goal_contents .goal_1 {background-color:#36B4E5;}
+main .contents_bg .goal .goal_contents .goal_2 {background-color:#ffffff;}
+main .contents_bg .goal .goal_contents .goal_3 {background-color:#F3C300;}
+main .contents_bg .goal .goal_contents li .icon {padding-bottom:20px;}
+/* 이미지 공통 디자인 */
+main .contents_bg .goal .goal_contents li .icon img {width:60px; height:60px;}
+/* h3 공통 디자인 */
+main .contents_bg .goal .goal_contents li h3 {
+    font-size:1.563rem; color:#fff;
+    letter-spacing:-0.2px;
+}
+/* goal_2 폰트색상 */
+main .contents_bg .goal .goal_contents .goal_2 h3 {color:#000;}
