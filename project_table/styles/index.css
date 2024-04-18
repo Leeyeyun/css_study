@@ -1,0 +1,55 @@
+main {
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:left;
+    padding-left:50px;
+}
+main h1 {
+    font-size:3.125rem;
+    font-weight:700;
+    line-height:1.2;/*120%*/
+    padding-top:49px;
+    padding-bottom:48px;
+}
+main h1 span, main p .user, main .list tbody .align em {color:#03c75a;}
+main p, main p .user {
+    padding-bottom:48px;
+    letter-spacing:-0.4px;
+}
+main .first {font-size:1.5rem; line-height:1.2; padding-bottom:48px;}
+main .second {font-size:1.25rem; line-height:1.7; padding-bottom:50px;}
+main p .user {font-size:1.5rem;}
+main p a {font-size:1.25rem; text-decoration:underline;}
+/* table */
+main h2 {font-size:1.563rem; padding-bottom:22px;}
+main h2 span {font-size:1.25rem;}
+main .list {
+    border-top:3px solid #000;
+    width:930px;
+    padding-bottom:11px;
+}
+/*폰트 두께 공통*/
+main .list, main .list thead, main .list thead tr, main .list thead th, main .list tbody, main .list tbody tr, main .list tbody .align em, main .list tbody td, main > a {font-size:1.25rem;}
+main .list thead {background-color:#f5f5f5;}
+main .list thead tr {}
+main .list tr .align {text-align:center;}
+main .list tr * {padding-top:15px; padding-bottom:15px; padding-left:15px;}
+main .list thead th {}
+main .list tbody {
+    /* border-top:1px solid #aaa;
+    border-bottom:1px solid #aaa; */
+    border:1px solid #aaa;
+    border-left:0; border-right:0;
+}
+main .list tbody tr {}
+main .list tbody td {}
+main .detail_view {
+    display:block;
+    text-align:right;
+    padding-bottom:165px;
+}
+main .btn {
+    text-align:center;
+    background-color:#03c75a;
+    width
+}
+main .btn a {}
