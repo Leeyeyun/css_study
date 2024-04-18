@@ -79,6 +79,7 @@ main .contents_bg .strategy .strategy_contents li h3 {
     font-size:1.25rem;
     font-weight:500;
     padding-bottom:20px;
+    text-decoration:underline;
 }
 main .contents_bg .strategy .strategy_contents .smart h3 {padding-bottom:15px;}
 main .contents_bg .strategy .strategy_contents li p {
