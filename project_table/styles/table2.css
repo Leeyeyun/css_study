@@ -1,0 +1,55 @@
+main {
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:left;
+    margin:61px 0 0 51px;
+}
+main h1 {
+    font-size:3.125rem;
+    line-height:1.2;
+    letter-spacing:-0.4px;
+    margin-bottom:48px;
+}
+main .user {font-size:1.5rem; margin-bottom:36px;}
+main .user em {
+    color:#03C75A;
+    font-weight:700;
+}
+/* table */
+main .tt {
+    width:769px;
+    border:3px solid #000;
+    border-left:0; border-right:0;
+    font-size:1.125rem;
+    letter-spacing:-0.4px;
+}
+main .tt tbody {}
+main .tt th, main .tt td {padding:21px 0;}
+main .tt tr:nth-child(1) th {padding:32px 0 58px 14px;}
+main .tt tr:nth-child(1) td {padding:21px 0 47px 14px; line-height:1.2;}
+main .tt tbody tr {border-bottom:1px solid #ddd}
+main .tt tbody tr th {
+    width:167px;
+    padding-left:14px;
+    background-color:#f5f5f5;
+}
+main .tt tbody tr td {
+    padding-left:14px;
+}
+/* table 공통 강조 */
+main .tt tbody tr td em {font-weight:700;}
+/* 자세한 내용 */
+main .detail {
+    font-size:1.25rem;
+    letter-spacing:-0.2px;
+    margin:5px 0 92px;
+}
+main .detail a {text-decoration:underline;}
+main .membership {width:769px; text-align:center;}
+main .membership a {
+    font-size:1.25rem;
+    display:inline-block;
+    background-color:#03C75A; color:#fff; border-radius:30px;
+    width:234px;
+    padding:20px 40px;
+}
+main a span{font-weight:700;}

@@ -7,7 +7,7 @@ div,header,nav,aside,article,section,footer,figure,
 address,blockquote,video,iframe,hr
 /* inline */
 span,em,strong,q,a,sub,sup,details,figcaption,summary,time,s,del,code,mark,img {
-    font-size:1.0rem;
+    font-size:1.0em;/*부모의 크기만 변경해도 자식, 자손의 글자 크기가 함께 변경되는 상대값 em설정*/
     font-weight:normal;
     font-style:normal;
     line-height:1.0; margin:0; padding:0;
