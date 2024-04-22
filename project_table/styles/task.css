@@ -1,21 +1,28 @@
 main {
+    width:1024px;
     font-family:"Noto Sans KR", sans-serif;
     text-align:center;
     letter-spacing:-0.2px;
     margin:200px 50px;
-    width:924px;
 }
 main h1 {font-size:2.5rem; font-weight:300; letter-spacing:-0.4px; line-height:1.2;}
 main h1 span {font-weight:700;}
-main p {
+main > p {
+    width:924px;
     text-align:right; color:#B1B1B1;
     margin:19px 0 9px;
 }
-main .info {width:924px;}
+main .info {width:924px; background-color:coral;}
 main .info thead {}
 main .info thead tr {}
 /* table line */
-main .info thead tr th {}
+main .info thead tr th {
+    border-top:2px solid #b6b6b6;
+    border-bottom:1px solid #000;
+}
+main .info tbody tr {border-bottom:1px solid #5A5A5A;}
+main .info tbody tr:nth-child(5) {border-bottom:0.75px solid #000;}
+/* e:table line */
 main .info thead tr th span {}
 main .info tbody {}
 main .info tbody tr {}
