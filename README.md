@@ -86,3 +86,33 @@
 * figma drop-shadow = css box-shadow
 * box shadow:xpx ypx blur값 색상;
 * 띄어쓰기로 수치 나열, 투명도를 주고 싶을 때는 색상을 rgba로 표현
+# 24.04.18
+## (html) 표 태그 table
+### table, tr, td, th
+* `table(block)` : 가로-행, 입력 칸 1개-열
+* 열의 개수는 테이블의 총 열 개수가 아닌 1행에 배치된 열 수 기준으로 본다!
+* `tr(행), td(열)(block)` : 열(td)는 항상 행(tr)안에 존재해야 한다.
+* table은 행, 열을 자식, 자손으로 가지는 부모로써 존재한다.
+* ` th 제목 열(block)` : 테이블에서의 구조 제목-내용에서 제목을 의미하는 태그
+* 제목 - 내용 순서로 배치하기 위해 제목(th)가 먼저 시작하고 내용(td)가 다음 순서로 배치된다.
+* th, td는 형제관계, tr(행) 안에서만 존재할 수 있다.
+### thead, tbody, tfoot
+* `thead, tbody, tfoot 행 그룹(block)` : tr(행)의 부모로 사용되는 태그
+* `thead` : 제목행그룹, th위주로 구성된 제목행(tr)을 묶을 때 사용한다.
+* `tbody` : 내용행그룹, td위주로 구성된 내용행(tr)을 묶을 때 사용한다.
+* `tfoot` : 결과행그룹, th&td들로 구성된 결과값을 가지는 결과행(tr)을 묶을 때 사용한다.
+* **(웹 접근성 개념)** 사용자들은 결과를 우선시로 확인하기 때문에 코드 작성시 thead > **tfoot** > tbody로 작성을 많이 함
+## (CSS) border & 공통 속성 설정
+### border 아웃라인
+* `border:1px solid #000;`
+* 두께 모양 색깔 순으로 작성한다.
+* 모양 종류 : `solid(기본 선)`, `dotted(원형 점선)`, `dashed(직사각형 점선)`
+* `border-color` : 선이 이미 존재하는 상태에서 색만 변경할 수 있는 속성
+* 표에서 선을 위아래만 주고 싶다면?
+`border:1px solid #aaa;`
+`border-left:0; border-right:0;`
+* 전체적인 border 설정 후 왼쪽, 오른쪽 border를 0으로 설정
+### 공통 속성 설정
+* 공통으로 속성을 설정하고 싶다면 선택자를 **연속으로 작성**하자!
+ex) table, table tr, table tr td {border:1px solid #f00}
+# 24.04.19
