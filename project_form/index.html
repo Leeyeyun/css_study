@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <main>
+        <h1>Welcome back</h1>
+        <h2>Welcome back! Please enter your details.</h2>
+        <form action="#" method="post" id="login_frm">
+            <fieldset>
+                <legend class="skip">로그인양식</legend>
+                <dl>
+                    <dt>Email</dt>
+                    <dd><input type="text" placeholder="Enter your email or id" name="user_id" required></dd>
+                </dl>
+                <dl>
+                    <dt>Password</dt>
+                    <dd><input type="password" placeholder="Enter your Password" name="user_pw" required></dd>
+                </dl>
+                <h2>Forgot password</h2>
+            </fieldset>
+            <div class="btn">
+                <button type="submit" id="login_btn">Login</button><br>
+                <button type="submit" id="login_google_btn">Sign in with Google</button>
+            </div>
+        </form>
+        <p class="join_link">Don't have on account? <a href="#">Sign up for free</a></p>
+    </main>
+</body>
+</html>

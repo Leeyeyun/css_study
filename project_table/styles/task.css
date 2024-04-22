@@ -1,0 +1,27 @@
+main {
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:center;
+    letter-spacing:-0.2px;
+    margin:200px 50px;
+    width:924px;
+}
+main h1 {font-size:2.5rem; font-weight:300; letter-spacing:-0.4px; line-height:1.2;}
+main h1 span {font-weight:700;}
+main p {
+    text-align:right; color:#B1B1B1;
+    margin:19px 0 9px;
+}
+main .info {width:924px;}
+main .info thead {}
+main .info thead tr {}
+/* table line */
+main .info thead tr th {}
+main .info thead tr th span {}
+main .info tbody {}
+main .info tbody tr {}
+main .info tbody tr th {}
+main .info tbody tr td {}
+main .info tbody tr td p {}
+main .info tbody tr td p span {}
+main .info tbody tr td p em {}
+main .info tbody tr td p del {}

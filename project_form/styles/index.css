@@ -1,0 +1,37 @@
+main {
+    width:1024px;
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:left;
+    padding:84px 255px;
+    letter-spacing:-0.2px;
+}
+main h1 {font-size:4.375rem; font-weight:900;}
+main > h2 {font-size:1.25rem; margin:50px 0 75px;}
+/* 이메일,패스워드 속성선택자 */
+main #login_frm input[required] {
+    background-color:#fff;
+    width:500px; padding:15px; border-radius:10px;
+    border:1px solid #aaa;
+}
+main #login_frm fieldset {}
+main #login_frm fieldset dl {}
+main #login_frm fieldset dl dt {font-size:1.875rem; font-weight:700; margin-bottom:18px;}
+main #login_frm fieldset dl dd {margin-bottom:38px;}
+main #login_frm fieldset h2 {font-size:1.875rem; font-weight:700; margin-bottom:32px;}
+/* 공통 버튼 적용-속성선택자 */
+main #login_frm .btn button[type=submit] {
+    width:500px; padding:15px 0;
+    font-weight:700;
+    border:1px solid #aaa; border-radius:10px;
+}
+/* 개별 버튼 */
+main #login_frm .btn button[id=login_btn] {
+    color:#fff; background-color:#222222;
+    margin-bottom:18px;
+}
+main #login_frm .btn button[id*=google] {
+    color:#222; background-color:#fff;
+    margin-bottom:62px;
+}
+main .join_link {text-align:center; color:#555555;}
+main .join_link a {color:#000; font-weight:700;}

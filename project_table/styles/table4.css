@@ -1,0 +1,48 @@
+main {
+    width:859px;
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:center;
+    background-color:#f5f5f5;
+    padding:60px 56px;
+}
+main p {
+    /* width:746px; */
+    font-size:1.45rem; color:#888; line-height:1.5; letter-spacing:-0.4px;
+}
+main h2 {
+    /* width:746px; */
+    font-size:1.5rem; font-weight:700; letter-spacing:-0.4px;
+    margin:63px 0 10px;
+}
+main .info {width:100%; font-size:1.25rem;}
+/* thead tr 각 th 넓이 설정 */
+main .info thead tr th:nth-child(1) {width:231px}
+main .info thead tr th:nth-child(3) {width:203px}
+/* thead design */
+main .info thead {background-color:#00155E; color:#fff;}
+main .info thead tr {}
+/* table line */
+main .info thead tr th, main .info tbody tr td {border:1px solid #aaa}
+/* th design */
+main .info thead tr th {line-height:56px; font-weight:700; text-align:center;}
+main .info tbody {}
+main .info tbody tr {}
+/* td 칸 넓이 */
+main .info tbody tr td:nth-child(1) {}
+main .info tbody tr td:nth-child(2),
+main .info tbody tr td:nth-child(3) {line-height:54px;}
+/* 소독일자 날짜 design */
+main .info tbody tr:nth-child(1) td:nth-child(1),
+main .info tbody tr:nth-child(3) td:nth-child(1),
+main .info tbody tr:nth-child(5) td:nth-child(1) {letter-spacing:-0.2px; font-weight:700;}
+/* table td 넓이 : 넓이는 하나에만 적용해도 수직으로 모두 적용됨! */
+main .info tbody tr:nth-child(1) td:nth-child(2) {width:105px;}
+/* 해당동 폰트컬러 */
+main .info tbody tr:nth-child(1) td:nth-child(3),
+main .info tbody tr:nth-child(2) td:nth-child(2),
+main .info tbody tr:nth-child(3) td:nth-child(3),
+main .info tbody tr:nth-child(4) td:nth-child(2),
+main .info tbody tr:nth-child(5) td:nth-child(3),
+main .info tbody tr:nth-child(6) td:nth-child(2) {color:#888;}
+/* 09:00~<br>16:00 design */
+main .info tbody tr:nth-child(1) td:nth-child(4) {line-height:1.5; font-weight:700;}

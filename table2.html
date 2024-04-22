@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0422 | table</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* 공통 */
+        table {
+            margin:0 0 10px 10px;
+            border-width:5px;
+            border-style:solid;
+        }
+        table td, table th {
+            padding:20px; border:1px solid gray;
+        }
+        /* 개별 */
+        .t1 {border-color:red;}
+        .tl tbody {}
+        .tl tbody tr {}
+        .tl tbody tr th {}
+        .tl tbody tr td {}
+        .t2 {border-color:blue;}
+        .t2 tbody {}
+        .t2 tbody tr {}
+        .t2 tbody tr th {}
+        .t2 tbody tr td {}
+        .t3 {border-color:coral;}
+        .t3 tbody {}
+        .t3 tbody tr {}
+        .t3 tbody tr th {}
+        .t3 tbody tr td {}
+        /* 수평, 수직 열 합치기 속성 */
+        /* 열 속성이므로 th, td 열에만 작성할 수 있다! */
+        /* rowspan 수직열 합치기 속성 */
+        /* colspan 수평열 합치기 속성 */
+    </style>
+</head>
+<body>
+    <table class="t1">
+        <tbody>
+            <tr>
+                <th rowspan="2">1, 3</th>
+                <th>2</th>
+            </tr>
+            <tr>
+                <!-- <td>3</td> -->
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="t2">
+        <tbody>
+            <tr>
+                <th>1</th>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <th colspan="3">4, 5, 6</th>
+                <!-- <td>5</td>
+                <td>6</td> -->
+            </tr>
+        </tbody>
+    </table>
+    <table class="t3">
+        <tbody>
+            <tr>
+                <th colspan="4">1,2,3,4</th>
+                <!-- <td>2</td>
+                <td>3</td>
+                <td>4</td> -->
+                <td rowspan="3">5,10,15</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td colspan="2">7,8</td>
+                <!-- <td>8</td> -->
+                <td>9</td>
+                <!-- <td>10</td> -->
+            </tr>
+            <tr>
+                <th colspan="2">11,12</th>
+                <!-- <td>12</td> -->
+                <td colspan="2">13,14</td>
+                <!-- <td>14</td> -->
+                <!-- <td>15</td> -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

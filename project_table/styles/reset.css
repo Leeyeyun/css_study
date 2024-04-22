@@ -2,12 +2,13 @@
 * {box-sizing:border-box;}
 /* block */
 body,html,
-h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,table,tr,td,th,thead,tbody,tfoot,
+h1,h2,h3,h4,h5,h6,fieldset,
+p,ul,ol,li,dl,dt,dd,table,tr,td,th,thead,tbody,tfoot,
 div,header,nav,aside,article,section,footer,figure,
 address,blockquote,video,iframe,hr
 /* inline */
 span,em,strong,q,a,sub,sup,details,figcaption,summary,time,s,del,code,mark,img {
-    font-size:1.0em;/*부모의 크기만 변경해도 자식, 자손의 글자 크기가 함께 변경되는 상대값 em설정*/
+    font-size:1.0em;
     font-weight:normal;
     font-style:normal;
     line-height:1.0; margin:0; padding:0;
@@ -17,3 +18,7 @@ ul,ol,li {list-style:none;}
 /* table에만 들어가는 reset정보 */
 table, tr, td, th {border-collapse:collapse;}
 th {text-align:left;}
+/* fieldset */
+fieldset {border:0;}
+/* 숨기고 싶은 속성 */
+.skip {display:none;}
