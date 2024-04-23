@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0423 | form</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        #testFrm .test1 ul li input[name^=user] {
+            width:200px; margin-bottom:10px;
+        }
+        /* 동의 radio */
+        /* 선택양식선택자:checked {} */
+        /* HTML <img src="" alt=""> */
+        /* CSS {background-image:url()} */
+        #testFrm .test2 ul li input[name*=MailA] {display:none;}
+        #testFrm .test2 ul li input[name*=MailA]:checked + label {
+            background-color:aqua;
+            background-image:url(./images/checked.svg);
+        }
+        /* 기본 태그에 기본 베이스 작성해놓기 */
+        #testFrm .test2 ul li label[for*=MailA] {
+            background-image:url(./images/unchecked.svg);
+            /* 배경이미지의 기본값 : xy반복, 안쪽 배경 */
+            background-repeat:no-repeat;
+            padding-left:26px;
+            display:inline-block;
+        }
+        #testFrm .test2 ul li label[for*=MailA] {
+            background-color:yellow;
+        }
+        /* 남/여 체크 디자인 */
+        #testFrm .test2 ul li label[for*=male] {
+            background-image:url(./images/green_unchecked.svg);
+            background-repeat:no-repeat;
+            padding-left:25px;
+            padding-bottom:3px;/*이미지가 잘려서 밑에 더 늘렸음*/
+            display:inline-block;
+        }
+        #testFrm .test2 ul li input[name=gender] {display:none;}
+        #testFrm .test2 ul li input[name=gender]:checked + label {
+            background-image:url(./images/green_checked.svg);
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get" id="testFrm">
+        <fieldset class="test1">
+            <legend class="skip">양식1</legend>
+            <ul>
+                <li><input type="text" name="userName" size="30" value="1" readonly></li>
+                <li><input type="text" name="userPhone" value="010" disabled></li>
+                <li><input type="search" name="userSearch" autofocus autocomplete="on"></li>
+            </ul>
+        </fieldset>
+        <fieldset class="test2">
+            <legend class="skip">양식2</legend>
+            <ul>
+                <li><textarea name="userReview" placeholder="리뷰는 100자 이상 작성해주세요" rows="5" cols="100"></textarea></li><!--여기도 사이즈는 css에서 변경-->
+                <li><textarea name="siteLaw" rows="5" cols="50" readonly>사이트 가입 약관 2024.04.23
+                </textarea></li>
+                <li>
+                    <input type="radio" id="userMailAgreeY" name="userMailAgree" value="userMailAgreeY">
+                    <label for="userMailAgreeY">동의</label>
+                </li>
+                <li>
+                    <input type="radio" id="userMailAgreeN" name="userMailAgree" value="userMailAgreeN">
+                    <label for="userMailAgreeN">비동의</label>
+                </li>
+                <li>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">남</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">여</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="hobby" value="movie" id="movie">
+                    <label for="movie">영화보기</label>
+                    <input type="checkbox" name="hobby" value="sports" id="sports">
+                    <label for="sports">운동하기</label>
+                </li>
+                <li></li>
+            </ul>
+        </fieldset>
+    </form>
+    <!-- id, class 이름 선언법 -->
+    <!-- 
+        1. 공백 위치에 _(언더바) 사용
+        ex) test_frm, button_right
+        2. 공백 대신 두번째 단어의 앞글자 대문자 처리 Carmel 표기법
+        ex) testFrm, buttonRight
+    -->
+</body>
+</html>

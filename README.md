@@ -1,4 +1,4 @@
-# CSS (Cascading Style Sheet)
+f# CSS (Cascading Style Sheet)
 ## CSS 작성 전 준비사항
 * html 문서 준비(태그 작성 완료 상태)
 * html, css 파일 별도 폴더 관리
@@ -116,3 +116,25 @@
 * 공통으로 속성을 설정하고 싶다면 선택자를 **연속으로 작성**하자!
 ex) table, table tr, table tr td {border:1px solid #f00}
 # 24.04.19
+# 24.04.23
+## form요소와 속성
+### `<form action:"#" mehtod="></form>`
+* action : 폼 데이터를 제출할 서버 스크립트 지정
+* method : 폼 데이터를 제출하는 방법, GET과 POST 방식이 있음.
+### `<input type="" name=""`
+* type : input 요소가 나타낼 입력 필드의 종류
+* name : input 요소의 이름을 지정
+* value : input 요소의 초기값을 지정
+* readonly : 읽기 전용, 선택은 되지만 글 작성은 안됨
+* autofocus, autocomplete : 검색창 자동 활성화 및 검색어 자동 저장 속성
+* placeholder : 안내문자, 정보 작성하기 전 미리 보이는 글자
+* value와 placeholder의 차이점 : value는 초기값으로 작성해도 사라지지 않음. 그러나 placeholder의 경우 안내문자이기 때문에 작성시 사라짐
+* maxlength : 글자 수 제한 설정
+### `<textarea></textarea>`
+* rows, cols : 텍스트창의 크기 설정
+* 사용용도 및 주의사항 : 크기는 주로 css에서 변경하기 때문에, row,col 거의 사용하지X
+### input의 입력양식과 선택양식
+* text, url 등의 사용자가 직접입력가능한 입력양식
+* radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
+* `name` : 입력양식(데이터구분용), 선택양식(데이터구분(개별데이터X, 그룹데이터구분용))
+* `value` : 입력양식(초기값), 선택양식(개별데이터구분용)

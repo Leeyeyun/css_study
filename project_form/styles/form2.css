@@ -1,0 +1,53 @@
+body, html {background-color:#222222;}/*모든 화면에 배경색 넣고 싶을 때*/
+main {
+    width:1024px;
+    font-family:"Noto Sans KR", sans-serif;
+    text-align:center;
+    padding-top:97px;
+    padding-bottom:400px;
+    margin:0 auto;
+}
+main > * {
+    width:500px;
+    margin-left:auto; margin-right:auto;
+}
+main .logo {margin-bottom:87px;}
+main .logo a {}
+main .logo a img {}
+/* sign in&sign up */
+main .tabTitle {margin-bottom:55px;}
+main .tabTitle a {
+    font-size:1.25rem; color:#fff; letter-spacing:-0.2px; text-transform:uppercase;
+    /* 반반으로 설정하는 법 */
+    width:49%;
+    display:inline-block;
+}
+/* .active 개별 디자인 */
+main .tabTitle .active span {border-bottom:3px solid#1ED760; padding-bottom:3px;}
+main #signInFrm {}
+main #signInFrm .inGroup {}
+main #signInFrm .inGroup input[name^=user] {
+    width:100%; line-height:73px; padding-left:40px; border-radius:36.5px; font-size:1.0rem; border:0;
+}
+main #signInFrm .inGroup .input input[name^=user]::placeholder {color:#aaa;}
+main #signInFrm .inGroup .input input[name*=Id] {margin-bottom:14px;}
+main #signInFrm .inGroup .input input[name*=Pw] {margin-bottom:31px;}
+main #signInFrm .inGroup .checkBox {text-align:left;}
+/* 체크박스 활성화 */
+main #signInFrm .inGroup .checkBox label[for*=stay] {
+    background-image:url(/project_form/images/check_box_n.svg);
+    background-repeat:no-repeat;
+    padding-left:34px;
+    padding-bottom:5px;
+    display:inline-block;
+}
+main #signInFrm .inGroup #stayAgreeY {display:none;}
+main #signInFrm .inGroup .checkBox input[name^=stay]:checked + label {background-image:url(/project_form/images/check_box_y.svg);}
+/* e:체크박스 활성화 */
+main #signInFrm .inGroup label, main #signInFrm .forgotPw {color:#fff;}
+main #signInFrm .inGroup .btn #signInBtn {
+    background-color:#1ED760; color:#fff; font-size:1.0rem;
+    font-weight:700; letter-spacing:-0.2px; padding-left:0;
+    margin:31px 0 14px;
+    width:100%; padding:25px 0; border-radius:36.5px; font-size:1.0rem; border:0;
+}
