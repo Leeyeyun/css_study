@@ -3,31 +3,49 @@ main {
     font-family:"Noto Sans KR", sans-serif;
     text-align:center;
     letter-spacing:-0.2px;
-    margin:200px 50px;
+    margin:200px auto;
+    background-color:aqua;
+}
+main > * {
+    width:924px;
+    background-color:yellow;
+    margin-left:auto; margin-right:auto;
 }
 main h1 {font-size:2.5rem; font-weight:300; letter-spacing:-0.4px; line-height:1.2;}
 main h1 span {font-weight:700;}
 main > p {
-    width:924px;
     text-align:right; color:#B1B1B1;
-    margin:19px 0 9px;
+    margin:19px auto 9px;
 }
-main .info {width:924px; background-color:coral;}
+main .info {background-color:darkblue;}
 main .info thead {}
 main .info thead tr {}
 /* table line */
 main .info thead tr th {
+    text-align:center;
     border-top:2px solid #b6b6b6;
     border-bottom:1px solid #000;
+    padding:13px 0;/*thead 칸 넓이*/
+    font-size:1.25rem; font-weight:700;
 }
+main .info thead tr th:nth-child(3) {border-right:0.5px solid #cacaca;}
+main .info tbody tr td:nth-child(2) {border-left:0.5px solid #cacaca; border-right:0.5px solid #cacaca;}
+main .info tbody tr td:nth-child(3) {border-right:0.5px solid #cacaca;}
 main .info tbody tr {border-bottom:1px solid #5A5A5A;}
 main .info tbody tr:nth-child(5) {border-bottom:0.75px solid #000;}
 /* e:table line */
+/* lg 강조박스 */
+main .info thead tr th:nth-child(2) {border:5px solid #FF0088; border-bottom:0.75px solid #000;}
+main .info tbody tr td:nth-child(2) {border-left:5px solid #FF0088; border-right:5px solid #FF0088;}
+main .info tbody tr:nth-child(5) td:nth-child(2) {border-bottom:5px solid #FF0088;}
+/* e:lg 강조박스 */
+/* tbody 칸 넓이 */
+main .info tbody tr:nth-child(1) td {padding:15px 0;}
 main .info thead tr th span {}
 main .info tbody {}
 main .info tbody tr {}
-main .info tbody tr th {}
-main .info tbody tr td {}
+main .info tbody tr th {font-weight:500; color:#7B7B7B; font-size:1.125rem; letter-spacing:-0.2px;}
+main .info tbody tr td {font-weight:500; color:#7B7B7B; font-size:1.125rem; letter-spacing:-0.2px;}
 main .info tbody tr td p {}
 main .info tbody tr td p span {}
 main .info tbody tr td p em {}
