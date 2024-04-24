@@ -1,0 +1,57 @@
+body, html {background-color:#aaa;}
+main {
+    background-color:coral;
+    font-family:"Noto Sans KR", sans-serif;
+    width:1024px;
+    text-align:center;
+    margin:41px auto;
+    letter-spacing:-0.2px;
+}
+main > * {
+    width:612px;
+    margin-left:auto; margin-right:auto;
+}
+main h1 {}
+/* law_part */
+main .law {
+    background-color:#fff;
+    width:612px; height:200px; padding:10px; border-radius:10px;
+    font-size:0.75rem; text-align:left;
+    overflow:auto;
+    margin: 41px auto 54px;
+}
+main .law h2, main .law h3, main .law p {line-height:1.6;}
+main .law h2 {margin-bottom:45px;}
+main .law p {margin-bottom:28px;}
+main .law p:last-child {margin-bottom:0;}
+/* #join_form_part */
+main #join_frm {}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {}
+main #join_frm .user_info dl dt {float:left; text-align:left; width:156px; background-color:lime;}
+main #join_frm .user_info dl dt span {color:#FF0000;} /* 필수항목 별 디자인 */
+main #join_frm .user_info dl dd {background-color:yellow; margin-bottom:10px;}
+/* 입력양식 디자인 */
+main #join_frm .user_info dl dd input {
+    background-color:#fff; width:300px; line-height:38px;
+    border:1px solid #aaa; border-radius:5px; padding-left:10px;
+}
+/* 주소검색&하단p 디자인 */
+main #join_frm .user_info dl dd #address_btn {
+    width:300px; line-height:43px; border-radius:5px;
+    border:1px solid #9E00B7; background-color:#fff;
+}
+main #join_frm .user_info dl dd .product_info {font-size:0.875rem; color:#aaa; /* margin:10px auto 20px; */}
+/* 생년월일 디자인 */
+main #join_frm .user_info dl dd input[name^=birth] {border:0; background-color:red; width:29px;}
+main #join_frm .user_info dl dd input::placeholder {font-size:0.875rem; color:#aaa;}
+main #join_frm .user_info dl dd button[id^=j] {
+    background-color:#9E00B7; width:120px; line-height:40px; 
+    border-radius:5px; border:0; 
+    color:#fff; font-size:0.875rem;
+}
+main #join_frm .user_info dl dd button[id*=get] {background-color:#CCCCCC; color:#fff; border:1px solid #ccc;}
+main #join_frm .user_info dl dd button[id*=confirm] {}
+main #join_frm .user_info dl dd select {width:50px; height:40px; border-radius:5px; border:0;}
+main #join_frm .user_info .submit_btn {}
+main #join_frm .user_info .submit_btn #join_btn {}

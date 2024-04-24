@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0424 | layout</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        html {scrollbar-width: 10px;;scrollbar-color: #222 #f1f1f1;}
+        /* Opera */
+        html::-o-scrollbar {width: 10px;}/*스크롤바 크기*/
+        html::-o-scrollbar-thumb {background-color: #222;border-radius: 5px;}/*스크롤 드래그바*/
+        html::-o-scrollbar-thumb:hover {background-color: #555;}
+        /* ::webkit - 크롬, 사파리, 엣지 브라우서 동작용(브라우저 엔진) */
+        ::-webkit-scrollbar {width: 10px;}/*스크롤바 크기*/
+        ::-webkit-scrollbar-track {box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);}/*스크롤바 배경*/
+        ::-webkit-scrollbar-thumb {background-color: #222;border-radius: 5px;}/*스크롤 드래그바*/
+        ::-webkit-scrollbar-thumb:hover {background-color: #555;}
+        .box {background-color:aqua; /* padding:20px; */
+        /*자식에 float 적용함으로써 생기는 부모인식오류 혜결 */
+        /* 해결법 1. 크기를 직접 적용한다.*/
+        height:100px;
+        /* 해결법 2. 자식 포함 크기재인식 속성 */
+        overflow:hidden;
+        /* 해결법 3. 가상요소생성 */
+        }
+        .box::after {
+            clear:both; content:''; display:block;
+        }
+        .box li {
+            width:100px; height:100px;
+            border:2px solid #000;
+            float:left;
+        }
+        .box li:last-child {float:right;}
+        /* nth 수열선택자 */
+        .box li:nth-child(2) {background-color:orange;}
+        .box li:first-child {background-color:red;}
+        .box li:last-child {background-color:coral;}
+        /* 내용길이의 변경에도 오류 안나도록 last-child 많이 사용 */
+        .box li:nth-child(even) {border-color:red;}
+        .box li:nth-child(odd) {border-color:blue;}
+        .box li:nth-child(3n+1) {background-color:gray;}
+        
+        .over {
+            background-color:aqua; margin:50px 0;
+            width:400px; height:200px;
+            overflow-y:auto;
+            overflow-x:scroll;
+        }
+        .over h1 {}
+        .over p {line-height:2;}
+    </style>
+</head>
+<body>
+    <ul class="box">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="over">
+        <h1>제목</h1>
+        <p>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용</p>
+    </div>
+</body>
+</html>
