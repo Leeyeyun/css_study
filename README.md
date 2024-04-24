@@ -116,6 +116,74 @@ f# CSS (Cascading Style Sheet)
 * 공통으로 속성을 설정하고 싶다면 선택자를 **연속으로 작성**하자!
 ex) table, table tr, table tr td {border:1px solid #f00}
 # 24.04.19
+## (CSS) 여백 margin, padding
+### 안쪽 여백 padding
+* `padding:npx npx npx npx;` : 여백의 순서는 top > right > bottom > left
+* 상하좌우가 다 동일한 경우 -> `padding:npx;`
+*상하, 좌우 각각 동일한 경우 -> `padding:상하px 좌우px;`
+### 바깥쪽 여백 margin
+* `margin:npx npx npx npx;` : 여백 순서 padding과 동일
+*  공통 선택자에 margin 적용했을 때 그 사이에 겹침현상 발생함
+*  중복되지 않게 먼저 선언하는 선택자에만 margin적용 후 하단 선택자에는 margin을 0으로 설정(겹치는 부분)
+## CSS TIP | line-height & a태그
+### 버튼, 입력 칸 등의 세로 폭
+* `line-height` : 글자가 한 줄 일때 높이가 정해진 레이아웃에서 수직중앙으로 배치하고자 하는 경우 px단위를 사용해서 적용한다.
+* 고정폭 -> width, height로 적용
+* 유동폭 -> padding으로 적용
+### a 태그 디자인할 때
+* a태그는 inline, block 특징을 모두 가질 수 있지만 고유한 기본 속성은 inline이기 때문에 표시속성 display명령으로 **block으로 변경**하지 않는 한 크기, 여백을 제대로 인식하지 못한다.
+## 수열선택자 nth
+* `nth-child(n)` : 수열선택자(자식 기준)
+* `nth-of-type(n)` : 수열선택자(요소 기준)
+* n의 수는 부모 내에 있는 모든 자식을 기준으로 해당하는 위치를 작성해야한다!
+# 24.04.22
+## (html) 테이블 열 수평/수직 방향 합치기
+### 수직열 합치기 rowspan
+* `rowspan="n"` : 수직열 합치기
+### 수평열 합치기 colspan
+* `colspan:"n"` : 수평열 합치기
+* 합치고 싶은 열 중 제일 우선순위 태그에 작성
+* 열합치기 적용하면 합친영역이 밀려난다. **합친 열은 모두 주석처리/지우기!**
+## 입력 및 선택 컨트롤 양식 Form Tag
+* `(block)form`사용자로부터 입력 받을 수 있는 폼을 정의하는 요소
+* 폼 데이터를 제출할 서버 스크립트 지정 **action**
+* 입력된 정보를 제출하는 최종 주소(URL)은 **action** 속성에 입력
+* 폼 데이터를 제출하는 방법 **method**
+* 입력된 정보를 제출할 때 HTTP 정보를 **method** 속성에 입력
+`<form action="#" method="get" id="search_frm"></form>`
+### method
+* `post` : 폼 데이터를 HTTP 본문에 포함하여 서버로 전송(보안 높음)
+* `get` : 폼 데이터를 URL에 추가하여 서버로 전송(보안 낮음)
+## (block) fieldset
+* `fieldset` : 양식의 일부를 그룹화하는 태그. legend 그룹제목 포함
+* 폼의 양식을 더 읽기 쉽고 이해하기 편하게 구성하는 데 주 목적이 있다
+* fieldset과 legend는 HTML 폼 양식 구분용으로 css에선 보이지 않도록 숨긴다!
+## (inline) input type="" 입력 필드 속성
+* `type` : input 요소가 나타낼 입력 필드의 종류
+* `name` : input 요소의 이름을 지정
+* `value` : input 요소의 초기값을 지정
+`<input type="number" name="item_count" value="1">`
+* 속성은 입력양식 / 선택&목록 컨트롤 양식 종류에 따라 의미가 달라진다.
+* type : text(문자), number(숫자), password(비밀번호), email(메일주소), search(검색), date(날짜), time(시간), url(주소)
+## 속성 maxlength, required, placeholder
+* `maxlength="n"` : 최대 n개 글자 제한
+* `required` : 필수 작성
+* `placeholder` : 정보 작성하기 전 미리 보이는 글자
+## (inline)button태그
+* `button` - 버튼 태그로 버튼 생성
+* `(type) submit` : 작성한 폼의 내용이 저장되어 넘어가는 것
+* `(type) reset` : 다시 작성
+## 속성선택자(form관련 주로 사용)
+1. 태그[속성] 태그에 속성이 있을 때
+`#search_frm input[required] {background-color:yellow;}`
+2. 태그[속성=값] 속성의 값이 이것일 때
+`#search_frm input[type=text] {background-color:lime}`
+3. 태그[속성^=값] 속성값이 이것으로 시작할 때
+`#search_frm input[type^=p] {background-color:pink}`
+4. 태그[속성$=값] 속성값이 이것으로 끝날 때
+`#search_frm input[type$=l] {background-color:blue}`
+5. 태그[속성*=값] 속성값이 이것을 포함할 때
+`#search_frm input[type*=ss] {background-color:coral}`
 # 24.04.23
 ## form요소와 속성
 ### `<form action:"#" mehtod="></form>`
