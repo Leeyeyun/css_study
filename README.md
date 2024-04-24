@@ -175,15 +175,15 @@ ex) table, table tr, table tr td {border:1px solid #f00}
 * `(type) reset` : 다시 작성
 ## 속성선택자(form관련 주로 사용)
 1. 태그[속성] 태그에 속성이 있을 때
-`#search_frm input[required] {background-color:yellow;}`
+- `#search_frm input[required] {background-color:yellow;}`
 2. 태그[속성=값] 속성의 값이 이것일 때
-`#search_frm input[type=text] {background-color:lime}`
+- `#search_frm input[type=text] {background-color:lime}`
 3. 태그[속성^=값] 속성값이 이것으로 시작할 때
-`#search_frm input[type^=p] {background-color:pink}`
+- `#search_frm input[type^=p] {background-color:pink}`
 4. 태그[속성$=값] 속성값이 이것으로 끝날 때
-`#search_frm input[type$=l] {background-color:blue}`
+- `#search_frm input[type$=l] {background-color:blue}`
 5. 태그[속성*=값] 속성값이 이것을 포함할 때
-`#search_frm input[type*=ss] {background-color:coral}`
+- `#search_frm input[type*=ss] {background-color:coral}`
 # 24.04.23
 ## form요소와 속성
 ### `<form action:"#" mehtod="></form>`
