@@ -206,5 +206,32 @@ ex) table, table tr, table tr td {border:1px solid #f00}
 * radio 등의 사용자의 입력이 아닌 선택으로 들어가는 선택양식
 * `name` : 입력양식(데이터구분용), 선택양식(데이터구분(개별데이터X, 그룹데이터구분용))
 * `value` : 입력양식(초기값), 선택양식(개별데이터구분용)
+## 선택속성 radio, checkbox
+### 선택속성 radio
+* `radio` : 선택할 수 있는 type
+`<input type="radio" name="userMailAgree" value="userMailAgreeY">동의`
+### label 이름까지 함께 선택 가능하게 만드는 태그
+- input이 label 안에 들어가면 부모-자식 관계로 모두 적용됨
+- input과 label이 형제관계인 경우 → label for=”id”를 작성하여 input의 id와 연결해야 적용됨(id만 가능)
+- input의 id는 value와 동일하게 적용
+### CSS 내에서 이미지 삽입
+- (html) `<img src="" alt="">`
+- (css) `{background-image:url()}`
+* 배경이미지의 기본값 : 제일 아래(안쪽)배경으로 설정 & 반복이미지
+* `background-repeat:no-repeat;` : 이미지 반복해제
+* `padding-left:26px;` : 겹침현상 해제(이미지와 글 사이 간격을 주는 것)
+* `{display:none;}` : 선택양식의 기본 체크표시는 없앨 수 없으므로 숨긴다.
+### 선택속성 checkbox
+* 체크와 해제 모두 가능한 속성
 # 24.04.24
 ## 수열선택자 nth
+* `nth-child(n)` : 해당 순서에 있는 태그 선택
+* `first-child` : 제일 첫번째 자식 선택
+* `last-child` : 제일 마지막 자식 선택, 주로 마지막 선택자는 이 속성을 많이 사용
+* `nth-child(even)` : 짝수 순서에 해당하는 태그 선택
+* `nth-child(odd)` : 홀수 순서에 해당하는 태그 선택
+* `nth-child(3n+1)` : 3의 배수에 1을 더한 순서에 해당하는 태그 선택
+## 속성 overflow
+* `overflow:hidden` : 내용이 넘친 글에서 넘친 부분 숨기는 속성
+* `overflow-y` : y축으로 스크롤 적용
+* `overflow:auto` : 자동으로 스크롤 적용
