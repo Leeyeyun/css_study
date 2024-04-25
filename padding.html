@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>0419 | padding</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {
+            width:300px; height:200px;
+            font-size:10rem;
+        }
+        .a {background-color:aqua;}
+        .b {
+            background-color:yellow;
+            /* margin:10px 0 30px 20px; */
+            /* margin:20px 0; */
+            /* margin:20px 0 50px; */
+        }
+        .c {
+            background-color:lime;
+            /* margin:0 0 10px 25px; */
+        }
+        .d {background-color:pink;}
+        .wrap {
+            background-color:skyblue;
+            display:inline-block;
+            padding:20px;
+        }
+        .wrap .e {background-color:palegreen;}
+        /* table */
+        .tt {width:500px; background-color:aqua; margin:30px 0 50px 20px;}
+        .tt td, .tt th {border:1px solid red;}
+        .tt td {padding:20px;}
+        .tt th {padding:20px 0;}
+        .tt thead tr th:nth-child(2) {background-color: yellow;}
+        .tt tbody tr:nth-child(1) td:nth-child(3) {background-color:blue;}
+        .tt tbody tr td:nth-child(1) {background-color:coral;}
+        .tt tbody tr:nth-child(2) {border-top:5px solid red}
+    </style>
+</head>
+<body>
+    <!-- class에 공백이 있다면 두 개 이상의 클래스가 있는 것-->
+    <!-- 공통 클래스 box, 개별 클래스 abcd -->
+    <!-- <div class="box" class="a">a</div> -->
+    <div class="box a">a</div>
+    <div class="box b">b</div>
+    <div class="box c">c</div>
+    <div class="box d">d</div>
+    <div class="wrap">
+        <div class="box e">e</div>
+    </div>
+    <hr>
+    <table class="tt">
+        <thead>
+            <tr>
+                <th>제목1</th>
+                <th>제목2</th>
+                <th>제목3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+            <tr>
+                <td>내용1</td>
+                <td>내용2</td>
+                <td>내용3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
