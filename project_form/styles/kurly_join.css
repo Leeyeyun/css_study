@@ -1,6 +1,5 @@
-body, html {background-color:#aaa;}
+body, html {background-color:#F5F5F5;}
 main {
-    background-color:coral;
     font-family:"Noto Sans KR", sans-serif;
     width:1024px;
     text-align:center;
@@ -28,30 +27,101 @@ main .law p:last-child {margin-bottom:0;}
 main #join_frm {}
 main #join_frm .user_info {}
 main #join_frm .user_info dl {}
-main #join_frm .user_info dl dt {float:left; text-align:left; width:156px; background-color:lime;}
-main #join_frm .user_info dl dt span {color:#FF0000;} /* 필수항목 별 디자인 */
-main #join_frm .user_info dl dd {background-color:yellow; margin-bottom:10px;}
+/* 제목 공통 */
+main #join_frm .user_info dl dt {
+    text-align:left; width:156px; line-height:40px;
+    float:left; /* float 적용 */
+}
+main #join_frm .user_info dl dt:nth-child(19) {line-height:40px;}
+main #join_frm .user_info dl dt span {color:#FF0000;} /* 필수표시 */
+/* 내용 공통 */
+main #join_frm .user_info dl dd {margin-bottom:10px;
+    width:300px; height:40px; text-align:left;
+    float:left; /* float 적용 */
+}
+/* 내용(버튼위치, 빈) 공통 */
+main #join_frm .user_info dl dd:nth-child(3n) {
+    width:156px;
+    text-align:right;
+    float:right; /* float 적용 */
+}
+main #join_frm .user_info dl dd:nth-child(21) {height:68px;}
 /* 입력양식 디자인 */
-main #join_frm .user_info dl dd input {
-    background-color:#fff; width:300px; line-height:38px;
+main #join_frm .user_info dl dd input[name^=user] {
+    background-color:#fff; width:100%; height:40px;
     border:1px solid #aaa; border-radius:5px; padding-left:10px;
+    float:left; /* float 적용 */
 }
+/* 입력양식 placeholder 적용 */
+main #join_frm .user_info dl dd input::placeholder {font-size:0.8rem; color:#aaa; letter-spacing:-0.2px;}
+/* 휴대폰 디자인 */
+main #join_frm .user_info dl dd select[name=agency] {
+    width:50px; height:40px; background-color:#fff; border-radius:5px; border:1px solid #aaa; font-size:0.75rem; padding-left:9px;
+    appearance:none; /* 화살표 숨기기 */
+    background-image:url(../images/arrow_drop_down.svg);
+    background-repeat:no-repeat;
+    background-position:30px 13px;
+    /*
+    background-position:x축값 y축값; (왼쪽상단 기준)
+    background-position:right bottom;
+    */
+}
+/* 휴대폰번호 개별 적용 */
+main #join_frm .user_info dl dd input[name*=number] {width:245px; float:right; text-align:left;}
 /* 주소검색&하단p 디자인 */
-main #join_frm .user_info dl dd #address_btn {
-    width:300px; line-height:43px; border-radius:5px;
+main #join_frm .user_info dl dd #btn_address_search {
+    width:300px; height:40px; border-radius:5px;
     border:1px solid #9E00B7; background-color:#fff;
+    margin-bottom:5px;
 }
-main #join_frm .user_info dl dd .product_info {font-size:0.875rem; color:#aaa; /* margin:10px auto 20px; */}
+main #join_frm .user_info dl dd #btn_address_search + span {font-size:0.875rem; color:#aaa;}
+main #join_frm .user_info dl dd:nth-child(20) {height:68px;}
+/* 성별 dd */
+main #join_frm .user_info dl dd:nth-child(23) {padding:10px 0 0 37px;}
+main #join_frm .user_info dl dd label[for=male],
+main #join_frm .user_info dl dd label[for=female] {margin-right:20px;}
+/* 성별 공통*/
+main #join_frm .user_info dl dd input[name=gender] {display:none;}
+/* 성별 선택공통 */
+main #join_frm .user_info dl dd input[name=gender]:checked+label {background-image:url(../images/kurly_checked.svg);}
+main #join_frm .user_info dl dd label {
+    background-image:url(../images/kurly_unchecked.svg);
+    background-repeat:no-repeat;
+    padding-left:20px;
+    background-position:0 5px;
+}
 /* 생년월일 디자인 */
-main #join_frm .user_info dl dd input[name^=birth] {border:0; background-color:red; width:29px;}
-main #join_frm .user_info dl dd input::placeholder {font-size:0.875rem; color:#aaa;}
-main #join_frm .user_info dl dd button[id^=j] {
-    background-color:#9E00B7; width:120px; line-height:40px; 
-    border-radius:5px; border:0; 
+/* 생년월일 dd만 별도 선택자 추가 */
+main #join_frm .user_info dl dd:nth-child(26) {
+    border:1px solid #9E00B7; border-radius:5px; background-color:#fff;
+}
+main #join_frm .user_info dl dd input[name^=birth] {border:none; text-align:center; width:25px; margin-top:10px;}
+main #join_frm .user_info dl dd input[name^=birth]:nth-child(1) {
+    width:40px; padding:0; margin-left:58px;
+}
+main #join_frm .user_info dl dd input[name^=birth] + span {margin:0 15px;}
+/* 생년월일 화살표 제거 */
+/* Chrome, Safari, Edge, Opera */
+main #join_frm .user_info dl dd input[type=number]::-webkit-outer-spin-button,
+main #join_frm .user_info dl dd input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none; margin: 0;
+}
+/* Firefox */
+input[type=number] {-moz-appearance: textfield;}
+/* e:생년월일 */
+/* 중복확인(아이디, 이메일), 인증번호 받기 공통 선택자 */
+main #join_frm .user_info dl dd button[id$=btn] {
+    width:120px; height:40px; background-color:#9E00B7;
+    border-radius:5px; border:0;
     color:#fff; font-size:0.875rem;
 }
-main #join_frm .user_info dl dd button[id*=get] {background-color:#CCCCCC; color:#fff; border:1px solid #ccc;}
-main #join_frm .user_info dl dd button[id*=confirm] {}
-main #join_frm .user_info dl dd select {width:50px; height:40px; border-radius:5px; border:0;}
-main #join_frm .user_info .submit_btn {}
-main #join_frm .user_info .submit_btn #join_btn {}
+/* 인증번호 받기(색상) */
+main #join_frm .user_info dl dd button[id*=get] {background-color:#CCCCCC;}
+main #join_frm .user_info dl dd button[id^=overlap] {}
+main #join_frm .user_info .result {}
+main #join_frm .user_info .result #join_btn {
+    width:200px; line-height:40px;
+    background-color:#9E00B7; border:0; border-radius:10px;
+    color:#fff; font-size:0.875rem;
+    margin-top:44px;
+}

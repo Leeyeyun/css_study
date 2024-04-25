@@ -1,0 +1,101 @@
+main {
+    font-family:"Noto Sans KR", sans-serif;
+    width:1024px;
+    text-align:left;
+    margin:60px auto;
+    color:#424242;
+    letter-spacing:-0.6px;
+}
+/* w360 그룹 적용 */
+main h1, main h2, main .sns_join, main #join_frm {width:360px; margin:0 auto;}
+main h1, main .sns_join {text-align:center;}
+/* 회원가입_sns */
+main h2 {font-size:1.125rem; font-weight:700; margin:67px auto 37px; letter-spacing:0;} /* 회원가입_제목 */
+main .sns_join {}
+main .sns_join h3 {font-size:0.75rem; color:#757575;}
+main .sns_join a {}
+main .sns_join a img {margin:15px 10px 33px;}
+/* 회원가입_form */
+main #join_frm {}
+main #join_frm .user_info {}
+main #join_frm .user_info dl {}
+/* form_제목 */
+main #join_frm .user_info dl dt,
+main #join_frm .user_agree h3 {font-weight:600; margin-bottom:17px;}
+/* 이메일_제목 */
+main #join_frm .user_info dl dt:first-child {border-top:1px solid #ededed; padding-top:33px;}
+/* form_입력내용 */
+main #join_frm .user_info dl dd input[name^=user] {
+    background-color:yellow; width:100%; height:40px; padding-left:15px;
+    background-color:#fff; border:1px solid #DBDBDB; border-radius:4px;
+    margin-bottom:33px;
+}
+/* form_입력내용_이메일 개별 */
+main #join_frm .user_info dl dd input[name$=id] {width:169px; margin-bottom:12px;}
+/* form_입력내용_placeholder */
+main #join_frm .user_info dl dd input[name^=user]::placeholder {color:#bdbdbd; font-size:0.875rem;}
+main #join_frm .user_info dl dd span {font-size:0.875rem; margin:0 5px;}
+/* 이메일_선택해주세요 */
+main #join_frm .user_info dl dd select[name=email_url] {
+    width:162px; height:40px; padding-left:15px;
+    background-color:#fff; border:1px solid #DBDBDB; border-radius:4px;
+    font-size:0.875rem; color:#424242; letter-spacing:-0.2px;
+}
+/* 이메일_선택해주세요_option 글씨 */
+main #join_frm .user_info dl dd select option {font-size:0.875rem;}
+/* 이메일인증하기 버튼 크기 및 폰트 */
+main #join_frm .user_info dl dd #email_certify_btn {
+    width:100%; height:49px; background-color:#f7f8fa; border:1px solid #dbdbdb;
+    font-size:1.125rem; font-weight:700; color:#bdbdbd;
+    margin-bottom:33px;
+}
+main #join_frm .user_info dl dd:nth-child(5),
+main #join_frm .user_info dl dd:nth-child(10) {color:#757575; font-size:0.875rem; letter-spacing:-0.5px; margin-bottom:10px;}
+/* 약관동의_form */
+main #join_frm .user_agree {}
+main #join_frm .user_agree h3 {}
+main #join_frm .user_agree .agree_check {
+    border:1px solid #EDEDED; padding:19px 19px 0;
+}
+/* 동의체크_공통 */
+main #join_frm .user_agree .agree_check li {
+    margin-bottom:22px;
+    font-size:0.875rem;
+}
+/* 전체동의 개별 디자인 */
+main #join_frm .user_agree .agree_check li:first-child {
+    font-size:0.75rem; color:#889399;
+    padding-bottom:19px; border-bottom:1px solid #EDEDED;
+}
+main #join_frm .user_agree .agree_check li input[name=agree] {}
+/* 전체동의 폰트사이즈&두께 */
+main #join_frm .user_agree .agree_check li label span {font-size:0.875rem; color:#424242; font-weight:700;}
+/* (필수) */
+main #join_frm .user_agree .agree_check li label em {font-size:0.75rem; color:#35C5F0;}
+/* (선택) */
+main #join_frm .user_agree .agree_check li:nth-child(5) label em,
+main #join_frm .user_agree .agree_check li:nth-child(6) label em {font-size:0.75rem; color:#889399;}
+/* arrow_right */
+main #join_frm .user_agree .agree_check li a {float:right;}
+/* 기존 checkbox 삭제 */
+main #join_frm .user_agree .agree_check li input[name=agree] {
+    display:none;
+}
+/* checkbox 베이스 */
+main #join_frm .user_agree .agree_check li label[for*=agree] {
+    background-image:url(../images/today_unchecked.svg);
+    background-repeat:no-repeat; display:inline-block;
+    padding:2px 0 3px 25px;
+}
+/* checkbox 활성화한 경우 */
+main #join_frm .user_agree .agree_check li input[name=agree]:checked + label {
+    background-image:url(../images/today_checked.svg);
+}
+/* 가입하기_btn */
+main #join_frm .join_login {}
+main #join_frm .join_login #join_btn {
+    width:100%; height:49px; border:0; background-color:#35C5F0; border-radius:4px;
+    color:#fff; font-size:1.125rem; font-weight:700; letter-spacing:-0.2px; margin:32px auto;
+} /* 회원가입하기 버튼 */
+main #join_frm .join_login p {text-align:center; font-size:0.875rem;}
+main #join_frm .join_login p a {text-decoration:underline; font-size:0.875rem; font-weight:700; color:#424242; margin-left:10px;} /* 로그인 */

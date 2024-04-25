@@ -36,17 +36,19 @@
                 <dl>
                     <dt>아이디<span>*</span></dt>
                     <dd><input type="text" name="user_id" placeholder="아이디를 입력해주세요" required></dd>
-                    <dd><button type="button" id="j_confirm_btn">중복확인</button></dd>
+                    <dd><button type="button" id="overlap_id_btn">중복확인</button></dd>
                     <dt>비밀번호<span>*</span></dt>
                     <dd><input type="password" name="user_pwd" placeholder="비밀번호를 입력해주세요" required></dd>
+                    <dd><!--  --></dd>
                     <dt>비밀번호확인<span>*</span></dt>
                     <dd><input type="password" name="user_pwd_again" placeholder="비밀번호를 한번 더 입력해주세요" required></dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                     <dt>이름<span>*</span></dt>
                     <dd><input type="text" name="user_name" placeholder="이름을 입력해주세요" required></dd>
+                    <dd><!--  --></dd>
                     <dt>이메일<span>*</span></dt>
                     <dd><input type="email" name="user_mail" placeholder="예)abc@web.com" required></dd>
-                    <dd><button type="button" id="j_email_confirm_btn">중복확인</button></dd>
+                    <dd><button type="button" id="overlap_mail_btn">중복확인</button></dd>
                     <dt>휴대폰<span>*</span></dt>
                     <dd>
                         <select name="agency">
@@ -59,14 +61,14 @@
                         </select>
                         <input type="number" name="user_number" placeholder="숫자만 입력해주세요 예)01012345678" required>
                     </dd>
-                    <dd><button type="button" id="j_get_num_btn">인증번호받기</button>
+                    <dd><button type="button" id="get_num_btn">인증번호받기</button>
                     </dd>
                     <dt>주소<span>*</span></dt>
                     <dd>
-                        <button type="button" id="address_btn">주소 검색</button>
-                        <span class="product_info">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
+                        <button type="button" id="btn_address_search">주소 검색</button>
+                        <span>배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                     </dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                     <dt>성별</dt>
                     <dd>
                         <input type="radio" name="gender" value="male" id="male">
@@ -76,17 +78,18 @@
                         <input type="radio" name="gender" value="none" id="none">
                         <label for="none">선택안함</label>
                     </dd>
-                    <dd></dd>
+                    <dd><!--  --></dd>
                     <dt>생년월일</dt>
                     <dd>
-                        <input type="number" name="birth_year" placeholder="YYYY">
+                        <input type="number" name="birth_year" maxlength="4" placeholder="YYYY">
                         <span>/</span>
-                        <input type="number" name="birth_month" placeholder="MM">
+                        <input type="number" name="birth_month" maxlength="2" placeholder="MM">
                         <span>/</span>
-                        <input type="number" name="birth_date" placeholder="DD">
+                        <input type="number" name="birth_date" maxlength="2" placeholder="DD">
                     </dd>
+                    <dd><!--  --></dd>
                 </dl>
-                <div class="submit_btn">
+                <div class="result">
                     <button type="submit" id="join_btn">가입하기</button>
                 </div>
             </fieldset>
