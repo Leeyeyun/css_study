@@ -1,0 +1,19 @@
+main {
+    width:1920px;
+    background-color:coral;
+    text-align:center;
+    margin:0 auto;
+}
+main .group {
+    width:1250px; background-color:aqua;
+    margin:0 auto;
+}
+main .g1 {}
+main .first h1 {}
+main .first h1 a {}
+main .first h2 {}
+main .first h2 span {}
+main .first .contribute_btn {}
+main .first .answer_btn {}
+main .first .answer_btn img {}
+main .first .answer_btn span {}
