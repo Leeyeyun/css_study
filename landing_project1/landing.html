@@ -16,6 +16,7 @@
 </head>
 <body>
     <main><!-- 12 group 묶음 -->
+        <!-- 1. 표지 -->
         <div class="bg bg1">
             <section>
                 <h1><a href="#"><img src="./images/logo.png" alt="WWF"></a></h1>
@@ -24,7 +25,48 @@
                 <a href="#" class="sponsor_question">후원관련 자주 묻는 질문 보기</a>
             </section>
         </div>
-        <div class="bg bg2"></div>
+        <!-- 2. 퀴즈 -->
+        <div class="bg bg2">
+            <section><!-- 1250 가운데 전체 레이아웃 -->
+                <form action="#" method="get" id="quiz_frm">
+                    <fieldset class="quiz">
+                        <legend class="skip">퀴즈양식</legend>
+                        <h2>Quiz</h2>
+                        <p>20년 사이 북극 빙하 면적은 몇 % 감소했을까요?</p>
+                        <ul class="quiz_list">
+                            <li>
+                                <input type="radio" name="quiz_q" value="q30" id="q30">
+                                <label for="q30">30%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz_q" value="q40" id="q40">
+                                <label for="q40">40%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz_q" value="q50" id="q50">
+                                <label for="q50">50%</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="quiz_q" value="q60" id="q60">
+                                <label for="q60">60%</label>
+                            </li>
+                        </ul>
+                        <p><button type="button" class="correct_btn">정답 확인 하기</button></p>
+                    </fieldset>
+                </form>
+                <div class="participate">
+                    <div class="status">
+                        <h2>퀴즈 참여 현황</h2>
+                        <div class="contents">
+                            <em>38387</em>
+                            <span>명</span>
+                            <strong>참여</strong>
+                        </div>
+                    </div>
+                    <p>*퀴즈 참여 현황은 매주 업데이트 됩니다</p>
+                </div>
+            </section>
+        </div>
         <div class="bg bg3"></div>
         <div class="bg bg4"></div>
         <div class="bg bg5"></div>

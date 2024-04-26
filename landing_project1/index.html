@@ -6,33 +6,68 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WWF 북극곰 보호 캠페인</title>
+    <!-- 웹글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- 디자인css -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/landing.css">
 </head>
 <body>
     <main><!-- 12 group 묶음 -->
-        <div class="group g1">
+        <!-- 1. 표지 -->
+        <div class="bg bg1">
             <section>
-                <h1><a href="#"><img src="#" alt="wwf 북극곰 보호 캠페인"></a></h1>
-                <h2>생존의 벼랑 끝에 서 있는<br><span>북극곰을 지켜주세요</span></h2>
-                <a href="#" class="contribute_btn">북극곰 후원하기 <img src="./images/btn_right_arrow.svg" alt=""></a>
-                <a href="#" class="answer_btn"><img src="./images/icon_sms.svg" alt=""> 후원관련 자주 묻는 질문 보기 <img src="./images/btn_right_arrow.svg" alt=""></a>
+                <h1><a href="#"><img src="./images/logo.png" alt="WWF"></a></h1>
+                <h2>생존의 벼랑 끝에 서 있는<br><em>북극곰을 지켜주세요</em></h2>
+                <a href="#" class="sponsor_link">북극곰 후원하기</a>
+                <a href="#" class="sponsor_question">후원관련 자주 묻는 질문 보기</a>
             </section>
         </div>
-        <div class="group g2"></div>
-        <div class="group g3"></div>
-        <div class="group g4"></div>
-        <div class="group g5"></div>
-        <div class="group g6"></div>
-        <div class="group g7"></div>
-        <div class="group g8"></div>
-        <div class="group g9"></div>
-        <div class="group g10"></div>
-        <div class="group g11"></div>
-        <div class="group g12"></div>
+        <!-- 2. 퀴즈 -->
+        <div class="bg bg2">
+            <section><!-- 1250 가운데 전체 레이아웃 -->
+                <form action="#" method="get" id="quiz_frm">
+                    <fieldset class="quiz">
+                        <legend class="skip">퀴즈양식</legend>
+                        <h1>Quiz</h1>
+                        <dl>
+                            <dt>20년 사이 북극 빙하 면적은 몇 % 감소했을까요?</dt>
+                            <dd>
+                                <label>
+                                    <input type="radio" name="quiz_answer" value="30%"><span>30%</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz_answer" value="40%"><span>40%</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz_answer" value="50%"><span>50%</span>
+                                </label>
+                                <label>
+                                    <input type="radio" name="quiz_answer" value="60%"><span>60%</span>
+                                </label>
+                            </dd>
+                            <dd><button type="button" class="correct_btn">정답 확인 하기</button></dd>
+                        </dl>
+                    </fieldset>
+                </form>
+                <div class="participate">
+                    <p>퀴즈 참여 현황</p>
+                    <p><em>38387</em><span>명</span> 참여</p>
+                    <p>*퀴즈 참여 현황은 매주 업데이트 됩니다</p>
+                </div>
+            </section>
+        </div>
+        <div class="bg bg3"></div>
+        <div class="bg bg4"></div>
+        <div class="bg bg5"></div>
+        <div class="bg bg6"></div>
+        <div class="bg bg7"></div>
+        <div class="bg bg8"></div>
+        <div class="bg bg9"></div>
+        <div class="bg bg10"></div>
+        <div class="bg bg11"></div>
+        <div class="bg bg12"></div>
     </main>
 </body>
-</html>

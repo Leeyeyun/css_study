@@ -1,19 +1,131 @@
-main {
-    width:1920px;
+main {}
+/* 배경 공통&개별값 */
+main .bg {
+    background-position:center;
+    background-repeat:no-repeat;
+}
+main .bg1 {
+    background-image:url(../images/bg.jpg);
+    height:1002px;
+}
+/* -------------------- 1. 표지 -------------------- */
+main .bg1 section {
+    width:1250px; margin:0 auto;
+}
+/* 1.표지-로고 */
+main .bg1 section h1 {}
+main .bg1 section h1 a {}
+main .bg1 section h1 a img {}
+/* 1.표지-제목 */
+main .bg1 section h2 {
+    text-align:center; color:#fff;
+    font-size:4.375rem; letter-spacing:-0.2px; line-height:1.2;
+    margin:200px 0 60px;
+}
+main .bg1 section h2 em {font-weight:700;}
+/* 1.표지-후원하기 링크 */
+/* 가상선택자 생성하여 아이콘이미지 삽입 */
+main .bg1 section .sponsor_link::after {
+    content:''; /* 지우면 안됨 */
+    background-image:url(../images/btn_right_arrow.svg);
+    background-repeat:no-repeat;
+    width:32px; height:32px;
+    display:inline-block;
+}
+main .bg1 section .sponsor_link {
+    /* CSS 회전각도단위 deg */
+    background:linear-gradient(90deg, #fe9300, #fe7300);
+    /* gradient적용을 위해 background통합속성을 사용했을 때 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(before, after)를 활용하는 것이 좋다. */
+    /* .sponsor_link flex 설정 */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* text-align:center; line-height:72px; */
+    font-size:2.125rem; color:#fff; font-weight:700; border-radius:35px;
+    width:409px; height:72px;
+    margin:0 auto;
+}
+/* 1.표지-후원관련 질문 링크 */
+main .bg1 section .sponsor_question {
+    background-color:#050505;
+    /* text-align:center; line-height:52px; */
+    font-size:1.625rem; color:#fff;
+    width:415px; height:52px; border-radius:25px;
+    margin-top:190px;
+    float:right; /* 오른쪽 정렬 */
+    /* .sponsor_question flex 설정 */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* 가상선택자 공통 속성 */
+main .bg1 section .sponsor_question::before,
+main .bg1 section .sponsor_question::after {
+    content:'';
+    background-repeat:no-repeat;
+    display:inline-block;
+    background-size:22px;
+    width:22px; height:22px;
+}
+main .bg1 section .sponsor_question::before {background-image:url(../images/icon_sms.svg);}
+main .bg1 section .sponsor_question::after {background-image:url(../images/btn_right_arrow.svg);}
+/* -------------------- 2. 퀴즈 -------------------- */
+main .bg2 {
+    background-image:url(../images/bg_2.jpg);
+    height:620px;
+}
+main .bg2 section {
     background-color:coral;
+    width:1250px; margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+}
+/* 2.퀴즈-퀴즈양식 */
+main .bg2 section #quiz_frm {
+    background-color:skyblue;
+    margin-top:110px;
+}
+main .bg2 section #quiz_frm .quiz {width:450px;}
+main .bg2 section #quiz_frm .quiz h1 {
+    font-size:3.438rem; font-weight:500; color:#fff;
     text-align:center;
-    margin:0 auto;
 }
-main .group {
-    width:1250px; background-color:aqua;
-    margin:0 auto;
+main .bg2 section #quiz_frm .quiz dl {}
+main .bg2 section #quiz_frm .quiz dl dt {
+    font-size:1.25rem; color:#fff;
+    margin:37px 0 35px;
 }
-main .g1 {}
-main .first h1 {}
-main .first h1 a {}
-main .first h2 {}
-main .first h2 span {}
-main .first .contribute_btn {}
-main .first .answer_btn {}
-main .first .answer_btn img {}
-main .first .answer_btn span {}
+main .bg2 section #quiz_frm .quiz dl dd:nth-child(2) {
+    background-color:red; height:196px;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+    margin-bottom:35px;
+}
+/* radio */
+main .bg2 section #quiz_frm .quiz dl dd label span {
+    font-size:1.25rem; color:#fff;
+    background-image:url(../images/quiz_unchecked.svg);
+    background-repeat:no-repeat;
+    width:28px; height:28px;
+    padding-left:48px;
+    display:inline-block;
+}
+/* 기존 radio 제거 */
+main .bg2 section #quiz_frm .quiz dl dd label input[name^=quiz] {display:none;}
+/* radio 체크디자인 변경 */
+main .bg2 section #quiz_frm .quiz dl dd label input[name*=answer]
+/* 정답확인버튼 */
+main .bg2 section #quiz_frm .quiz dl dd .correct_btn {
+    width:100%; line-height:42px;
+    color:#fff; background-color:#050505;
+    border-radius:50px; border:0;
+}
+/* 2.퀴즈-퀴즈참여현황 */
+main .bg2 section .participate {
+    background-color:pink;
+    margin-top:165px;
+}
+main .bg2 section .participate p {}
+main .bg2 section .participate p em {}
+main .bg2 section .participate p em span {}
