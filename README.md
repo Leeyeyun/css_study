@@ -235,3 +235,59 @@ ex) table, table tr, table tr td {border:1px solid #f00}
 * `overflow:hidden` : 내용이 넘친 글에서 넘친 부분 숨기는 속성
 * `overflow-y` : y축으로 스크롤 적용
 * `overflow:auto` : 자동으로 스크롤 적용
+# 24.04.26
+## CSS Layout
+### float, flex
+* `float` : 형제 관계에 해당하는 block or inline tag 왼쪽, 오른쪽 정렬할 때 사용
+* ex) ul-li*3개 정렬 `ul li {float:left;}`
+* `flex` : 정렬하고자 하는 아이템의 부모한테 flex를 먼저 설정한다.
+* ex) ul-li*3개 정렬 `ul {display:flex;}`
+* flex 설정 시 **기본값** : 메인축(수평) 교차축(수직)
+* `display:flex` : 정렬대상의 부모 설정 속성값, 설정 시 해당 부모 기준 자식까지(자손X) flexible box layout으로 처리하겠다!
+### flex | container, item, 메인축, 교차축
+* `container` : 정렬하고자 하는 대상의 부모
+* `item` : 정렬하고자 하는 대상
+* `메인축` : 아이템이 **정렬**된 방향
+* `교차축` : 아이템이 **교차**된 방향
+* 교차축은 아이템을 한번에 선택하는 방향, 메인축은 아이템을 가로지르는 방향!
+## (container) flex 속성
+### (container) flex direction
+* container안의 item의 **메인축 방향**을 설정
+1. `row(기본값)` : 왼쪽 -> 오른쪽 수평축
+2. `row-reverse` : 오른쪽 -> 왼쪽, (float:right와 유사하다)
+3. `column` : 위 -> 아래 수직축 변경
+4. `column-reverse` : 아래 -> 위
+### (container) flex-wrap
+* container 내부 items **줄바꿈처리**를 설정
+1. `nowrap(기본값)` : 줄바꿈하지 않음(한 줄 처리), 가변너비에 따라 자동으로 % 크기 변경
+2. `wrap` : 자동 줄바꿈 처리
+3. `wrap-reverse` : 행 기준 역방향으로 자동 줄바꿈 처리
+### (container) flex-flow
+* **flex-direction**과 **flex-wrap**을 묶음으로 처리
+ex) `flex-flow:column wrap;` : 세로열 기준으로 자동 줄바꿈 처리
+### (container) justify-content
+* **메인축의 정렬방법** 설정
+1. `flex-start` : items의 시작점 container의 시작점으로 정렬
+2. `flex-end` :  items의 시작점 container의 끝점으로 정렬
+3. `center` : items을 메인축 기준 container에서 가운데 정렬
+4. `space-between` : items을 container의 **start, end 양끝 items을 배치**하고 나머지는 고르게 정렬
+5. `space-around` : items을 container안에서 균등한 여백을 포함하여 정렬
+### (container) align-content
+* 교차축의 아이템이 2줄 이상일 경우의 정렬방법
+* justify-content와 동일!
+### (container) align-items
+* 교차축의 아이템이 1줄 일 경우의 정렬방법
+* space-between과 space-around는 제외됨. 1줄이기 때문에!
+## (item) flex 속성
+### (item) align-self
+* container에 적용하는 align-items보다 우선순위가 높음
+* flex box의 교차축을 정렬
+* align-content/align-item과 동일!
+### (item) order
+* 아이템의 정렬 순서를 설정 가능
+* 음수(-n) ~ 양수(n)으로 순서 지정
+* 숫자가 낮을수록 우선 순서로 위치가 변경됨
+### (item) flex
+* grow(증가) + shrink(감소) + basis(기본)을 한번에 작성하는 속성
+* `flex:1 0 auto` : grow:1 shrink:0 basis:auto
+* `flex:1;` : container 내 item들을 1:1:1..의 비율로 넓이 설정
