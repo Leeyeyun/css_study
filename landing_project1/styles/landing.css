@@ -1,5 +1,6 @@
 main {}
 /* 배경 공통&개별값 */
+main .bg > section {width:1250px; margin:0 auto; /* background-color:coral; */}
 main .bg {
     background-position:center;
     background-repeat:no-repeat;
@@ -8,10 +9,14 @@ main .bg1 {
     background-image:url(../images/bg.jpg);
     height:1002px;
 }
-/* -------------------- 1. 표지 -------------------- */
-main .bg1 section {
-    width:1250px; margin:0 auto;
+main .bg2 {
+    background-image:url(../images/bg_2.jpg);
+    /* height:620px; */
+main .bg3 {
+    background-image:url(../images/bg_3.jpg);
 }
+}
+/* -------------------- 1. 표지 -------------------- */
 /* 1.표지-로고 */
 main .bg1 section h1 {}
 main .bg1 section h1 a {}
@@ -25,14 +30,18 @@ main .bg1 section h2 {
 main .bg1 section h2 em {font-weight:700;}
 /* 1.표지-후원하기 링크 */
 /* 가상선택자 생성하여 아이콘이미지 삽입 */
-main .bg1 section .sponsor_link::after {
+main .bg1 section .sponsor_link::after,
+main .bg3 section .sponsor_link::after {
     content:''; /* 지우면 안됨 */
     background-image:url(../images/btn_right_arrow.svg);
     background-repeat:no-repeat;
     width:32px; height:32px;
     display:inline-block;
+    margin-left:5px;
 }
-main .bg1 section .sponsor_link {
+/* 북극곰 후원하기 버튼 */
+main .bg1 section .sponsor_link,
+main .bg3 section .sponsor_link {
     /* CSS 회전각도단위 deg */
     background:linear-gradient(90deg, #fe9300, #fe7300);
     /* gradient적용을 위해 background통합속성을 사용했을 때 해당 요소 추가 배경이미지 꾸미기를 원한다면 가상선택자(before, after)를 활용하는 것이 좋다. */
@@ -67,21 +76,19 @@ main .bg1 section .sponsor_question::after {
     background-size:22px;
     width:22px; height:22px;
 }
-main .bg1 section .sponsor_question::before {background-image:url(../images/icon_sms.svg);}
-main .bg1 section .sponsor_question::after {background-image:url(../images/btn_right_arrow.svg);}
+main .bg1 section .sponsor_question::before {background-image:url(../images/icon_sms.svg); margin-right:5px;}
+main .bg1 section .sponsor_question::after {background-image:url(../images/btn_right_arrow.svg); margin-left:5px;}
 /* -------------------- 2. 퀴즈 -------------------- */
-main .bg2 {
-    background-image:url(../images/bg_2.jpg);
-    height:620px;
-}
 main .bg2 section {
-    background-color:coral;
-    width:1250px; margin:0 auto;
-    display:flex;
+    display:flex; /* flex의 item 기본 메인축 정렬-수평 */
     justify-content:space-between;
 }
+main .bg2 section > * {
+    flex:1;
+   /*  width:50%; */
+}
 /* 2.퀴즈-퀴즈양식 */
-main .bg2 section #quiz_frm {margin-top:110px;}
+main .bg2 section #quiz_frm {padding:80px 0;}
 main .bg2 section #quiz_frm .quiz {width:450px;}
 main .bg2 section #quiz_frm .quiz h2 {
     font-size:3.438rem; font-weight:500; color:#fff;
@@ -101,18 +108,18 @@ main .bg2 section #quiz_frm .quiz .quiz_list {
 main .bg2 section #quiz_frm .quiz .quiz_list li {}
 /* 기존 radio 제거 */
 main .bg2 section #quiz_frm .quiz .quiz_list li input[name^=quiz] {display:none;}
+/* radio 체크 활성화 */
+main .bg2 section #quiz_frm .quiz .quiz_list li input[name*=quiz]:checked + label {
+    background-image:url(../images/quiz_checked.svg);
+}
 /* radio 베이스 */
 main .bg2 section #quiz_frm .quiz .quiz_list li label[for*=q] {
     font-size:1.25rem; color:#fff;
     background-image:url(../images/quiz_unchecked.svg);
     background-repeat:no-repeat;
-    width:28px; height:28px;
+    line-height:28px;
     padding-left:48px;
     display:inline-block;
-}
-/* radio 체크 활성화 */
-main .bg2 section #quiz_frm .quiz .quiz_list li input[name*=quiz]:checked + label {
-    background-image:url(../images/quiz_checked.svg);
 }
 /* 정답확인버튼 */
 main .bg2 section #quiz_frm .quiz p .correct_btn {
@@ -123,9 +130,43 @@ main .bg2 section #quiz_frm .quiz p .correct_btn {
 }
 /* 2.퀴즈-퀴즈참여현황 */
 main .bg2 section .participate {
-    background-color:pink;
     margin-top:165px;
+    text-align:center;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:end;
 }
-main .bg2 section .participate .status {}
-main .bg2 section .participate .status h2 {}
-main .bg2 section .participate .status h2 .contents {}
+main .bg2 section .participate .status {width:509px; overflow:hidden;}
+main .bg2 section .participate .status h2 {
+    font-size:1.625rem; font-weight:700; color:#fff;
+    background-color:#fe9300; line-height:70px;
+    border-radius:10px 10px 0 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+main .bg2 section .participate .status h2::before {
+    content:'';
+    background-image:url(../images/icon_person.svg);
+    background-repeat:no-repeat;
+    width:30px; height:30px;
+    display:inline-block;
+    margin-right:5px;
+}
+main .bg2 section .participate .status .contents * {
+    font-size:2.688rem; font-weight:700; color:#fe9300; 
+}
+main .bg2 section .participate .status .contents {
+    padding:50px 0; background-color:#fff; margin-bottom:35px;
+    border-radius:0 0 10px 10px;
+}
+main .bg2 section .participate .status .contents em {font-size:4.375rem; letter-spacing:-0.2px;}
+main .bg2 section .participate .status .contents span {}
+main .bg2 section .participate .status .contents strong {color:#050505;}
+main .bg2 section .participate p {font-size:1.25rem; color:#fff;}
+/* -------------------- 3. 동영상 -------------------- */
+main .bg3 section {padding:110px 0; text-align:center;}
+main .bg3 section h2 {
+    font-size:3.438rem; font-weight:500; letter-spacing:-0.1px; line-height:1.2;
+}
+main .bg3 section iframe {margin:80px 0 60px;}

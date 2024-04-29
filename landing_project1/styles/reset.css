@@ -23,3 +23,4 @@ th {text-align:left;}
 fieldset {border:0;}
 /* 숨기고 싶은 속성 */
 .skip {display:none;}
+input, button, label {cursor:pointer;}
