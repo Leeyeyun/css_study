@@ -1,0 +1,86 @@
+#app {
+    width:375px; height:812px; /* 와이어프레임 기준 임시높이값 */
+    border:1px solid black; /* 경계 구분용 */
+    margin:30px auto 0;
+    padding-top:42px;
+    /* nav 하단 고정 필요 속성 */
+    position:relative;
+}
+/* ============ 레이아웃 ============ */
+#app header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 16px; height:56px;
+    border:1px solid black;
+}
+#app main {padding-top:150px; height:658px; overflow-y:auto;}
+#app nav {
+    display:flex;
+    justify-content:center;
+    padding:0 16px;
+    height:56px; border:1px solid black;
+    /* 위치 하단 고정 */
+    position:absolute; bottom:0; left:0; width:100%;
+}
+/* ============ Header ============ */
+#app header a {width:24px; height:24px; background-color:lightgrey;}
+#app header .left {display:flex;}
+#app header .left a {margin-right:16px;}
+#app header .left a:last-child {margin-right:10;}
+#app header .left .all_nav {}
+#app header .left .pay {}
+#app header .right {display:flex;}
+#app header .right a {margin-left:16px;}
+#app header .right a:first-child {margin-left:0;}
+#app header .right .chat {}
+#app header .right .alarm {}
+#app header .right .my_page {}
+/* ============ Main ============ */
+/* ============ Main-Search Form ============ */
+#app main #search_frm {padding:0 16px; }
+#app main #search_frm .search_g {
+    border:1px solid black;
+    border-radius:171px;
+    padding:10px 24px;
+    display:flex;
+    justify-content:space-between;
+}
+#app main #search_frm .search_g > img[alt=logo] {width:24px; height:24px;}
+#app main #search_frm .search_g > input[name^=search] {border:0; outline:none;}
+#app main #search_frm .search_g > #search_btn {
+    width:24px; height:24px;
+    overflow:hidden;
+}
+#app main #search_frm .search_g > #search_btn img {}
+/* ============ Main-광고, 블로그, 날씨 ============ */
+#app main .adver {}
+#app main .adver1 {
+    margin:20px 16px 123px;
+    background-color:gray; height:16px;
+}
+#app main .adver2 {
+    background-color:gray; height:100px; margin:0 16px 19px;
+}
+#app main .weather_g {
+    display:flex;
+    margin:0 16px 18px;
+}
+#app main .weather_g li {
+    flex:1; height:66px; background-color:gray;
+}
+#app main .weather_g li:first-child {margin-right:9px;}
+#app main .blog_g {
+    margin:0 16px; height:135px; background-color:gray;
+}
+/* ============ Nav ============ */
+#app nav a {
+    border:1px solid black;
+    flex:1;
+    display:flex;
+    flex-flow:column wrap;
+    justify-content:center;
+    align-items:center;
+}
+#app nav a img {}
+#app nav a span {}

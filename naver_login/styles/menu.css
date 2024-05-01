@@ -1,0 +1,119 @@
+#app {
+    padding-top:42px;
+    width:375px; height:812px;
+    margin:30px auto 0;
+    border:1px solid black;
+}
+/* ============ 레이아웃 ============ */
+#app header {
+    padding:0 16px; border:1px solid black;
+    height:56px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#app main {}
+/* ============ Header ============ */
+#app header .left {
+    font-size:1.25rem; letter-spacing:-0.2px;
+}
+#app header .right {
+    display:flex;
+}
+#app header .right a {
+    width:24px; height:24px; background-color:lightgray;
+    margin-right:16px;
+}
+#app header .right a:last-child {margin-right:0;}
+/* ============ Main ============ */
+/* ============ Main-광고1 ============ */
+#app main .adver {}
+#app main .adver1 {height:91px; background-color:grey;}
+/* ============ Main-로그인 ============ */
+#app main .login_link {
+    width:100%;
+    padding:15px 16px;
+    border:1px solid black;
+    display:inline-block;
+}
+#app main .login_link em {font-weight:700;}
+/* ============ Main-Category ============ */
+#app main .category {
+    padding:16px; height:181px;
+    border:1px solid black;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-between;
+    align-content:space-between;
+}
+#app main .category li {
+    display:flex;
+    flex-flow:column wrap;
+    align-items:center;
+    width:calc(100% / 4);
+    font-size:0.75rem;
+    border:1px solid black;
+}
+#app main .category li a {
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+#app main .category li a img {
+    background-color:lightgray; width:42px; height:42px;
+    margin-bottom:5px;
+}
+/* ============ Main-공지사항, 광고2 ============ */
+#app main .notice_event {
+    margin:16px 0; padding:10px 16px;
+    border:1px solid black;
+    display:flex;
+    justify-content:left;
+    align-items:center;
+    font-size:0.75rem;
+}
+#app main .notice_event img {
+    width:24px; height:24px; background-color:lightgray;
+    margin-right:16px;
+}
+#app main .notice_event a {}
+#app main .adver2 {height:95px; background-color:gray;}
+/* ============ Main-전체서비스 ============ */
+#app main .all_service {}
+#app main .all_service .top {
+    padding:10px 16px; margin:33px 0 18px;
+    border:1px solid black;
+    display:flex;
+    justify-content:space-between;
+}
+#app main .all_service .top h2 {}
+#app main .all_service .top .service_search {
+    display:flex;
+    align-items:center;
+}
+#app main .all_service .top .service_search img {width:16px; height:16px; background-color:lightgrey;}
+#app main .all_service .top .service_search span {font-size:0.75rem; margin-left:10px;}
+/* ============ Main-전체서비스-뉴스 ============ */
+#app main .all_service .service_news {}
+#app main .all_service h3 {
+    padding:10px 16px;
+    border:1px solid black;
+    font-size:0.75rem;
+}
+#app main .all_service .service_news .news_contents {
+    border:1px solid black;
+    margin:18px 16px; height:64px;
+    display:flex;
+    flex-flow:row wrap;
+    align-content:space-between;
+}
+#app main .all_service .service_news .news_contents a {
+    border:1px solid black;
+    display:flex;
+    align-items:center;
+    width:50%;
+}
+#app main .all_service .service_news .news_contents a img {
+    width:24px; height:24px; background-color:lightgrey;
+    margin-right:9px;
+}
