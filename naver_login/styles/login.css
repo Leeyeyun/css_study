@@ -1,0 +1,84 @@
+#app {
+    width:375px; height:812px;
+    margin:30px auto;
+    border:1px solid black;
+    padding-top:42px;
+}
+/* ============ top, logo ============ */
+#app .top {
+    border:1px solid black;
+    padding:16px 16px;
+}
+#app .top .prev {
+    width:24px; height:24px; background-color:lightgrey;
+    overflow:hidden; display:inline-block;
+}
+#app .top .prev img {}
+#app h1 {
+    width:161px; height:52px; background-color:lightgrey;
+    margin:43px auto 42px;
+}
+#app h1 a {}
+#app h1 a img {}
+#app .keyboard_g {
+    border:1px solid black;
+    padding:0 16px 16px 16px;
+}
+#app .keyboard_g a {
+    font-size:0.75rem;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+#app .keyboard_g a img {
+    width:16px; height:16px; background-color:lightgrey;
+    margin-left:6px;
+}
+/* ============ form ============ */
+#app #login_frm {}
+#app #login_frm .login_g {}
+#app #login_frm .login_g ul {
+    margin:16px 16px 0;
+}
+#app #login_frm .login_g ul li {
+}
+#app #login_frm .login_g ul li input[name^=user] {
+    width:100%; height:56px; padding-left:56px;
+    outline:none;
+}
+/* input, button은 inline 요소지만 css에서 크기를 인식한다. */
+#app #login_frm .login_g ul li input[name$=id] {
+    border-radius:5px 5px 0 0;
+    border:1px solid #000;
+    border-bottom:0;
+}
+#app #login_frm .login_g ul li input[name$=pw] {
+    border-radius:0 0 5px 5px;
+    border:1px solid #000;
+}
+#app #login_frm .login_g .btn {margin:16px 16px 35px;}
+#app #login_frm .login_g .btn #login_btn {
+    width:100%; height:51px; border-radius:5px;
+    background-color:#fff; border:1px solid black;
+}
+/* button 안쪽 글자는 기본 정렬이 가운데이다! */
+/* ============ 로그인 오류시 출력 메세지(기본 숨김) ============ */
+#app #login_frm .login_g .error_message {
+    margin-top:16px; font-size:0.75rem;
+    display:none; /* 초기 숨김 */
+}
+/* ============ 찾기, 가입 ============ */
+#app .search_join {
+    font-size:0.75rem; text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#app .search_join a {}
+#app .search_join a::after {
+    content:''; display:inline-block;
+    width:1px; height:10px;
+    background-color:black;
+    margin:0 8px;
+}
+#app .search_join a:last-child::after {display:none;}

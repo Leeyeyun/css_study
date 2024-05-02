@@ -11,34 +11,33 @@
     <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
-    <!-- status bar -->
-    <header>
-        <a href="#" class="back_btn"></a>
-    </header>
-    <main>
-        <h1><a href="#"><img src="#" alt=""></a></h1>
-        <form action="#" method="post" id="login_frm">
+    <div id="app">
+        <!-- status bar -->
+        <div class="top">
+            <a href="./menu.html" class="prev"><img src="#" alt="이전 페이지로 이동"></a>
+        </div>
+        <h1><a href="./index.html"><img src="#" alt="NAVER"></a></h1>
+        <div class="keyboard_g">
             <a href="#">PC 키보드 보기 <img src="#" alt=""></a>
-            <fieldset>
-                <legend class="skip">로그인</legend>
-                <div class="login id">
-                    <img src="#" alt="">
-                    <input type="text" name="user_id">
-                </div>
-                <div class="login pw">
-                    <img src="" alt="">
-                    <input type="password" name="user_pw">
+        </div>
+        <form action="#" method="post" id="login_frm">
+            <fieldset class="login_g">
+                <legend class="skip">로그인양식</legend>
+                <ul>
+                    <li><input type="text" name="user_id" placeholder="아이디" autofocus></li>
+                    <li><input type="password" name="user_pw" placeholder="비밀번호"></li>
+                </ul>
+                <p class="error_message">로그인이 실패하였습니다. 정보를 다시 한번 확인해주세요.</p>
+                <div class="btn">
+                    <button type="submit" id="login_btn">로그인</button>
                 </div>
             </fieldset>
         </form>
-        <button type="submit">로그인</button>
-        <div class="find">
+        <div class="search_join">
             <a href="#">비밀번호 찾기</a>
-            <span></span>
             <a href="#">아이디 찾기</a>
-            <span></span>
             <a href="#">회원가입</a>
         </div>
-    </main>
+    </div>
 </body>
 </html>
