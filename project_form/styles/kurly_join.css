@@ -53,7 +53,13 @@ main #join_frm .user_info dl dd input[name^=user] {
     float:left; /* float 적용 */
 }
 /* 입력양식 placeholder 적용 */
-main #join_frm .user_info dl dd input::placeholder {font-size:0.8rem; color:#aaa; letter-spacing:-0.2px;}
+main #join_frm .user_info dl dd input::placeholder {
+    font-size:0.8rem; color:#aaa; letter-spacing:-0.2px;
+    position:relative; bottom:3px;
+}
+main #join_frm .user_info dl dd input[name^=birth] {
+    position:relative; bottom:2px;
+}
 /* 휴대폰 디자인 */
 main #join_frm .user_info dl dd select[name=agency] {
     width:50px; height:40px; background-color:#fff; border-radius:5px; border:1px solid #aaa; font-size:0.75rem; padding-left:9px;
