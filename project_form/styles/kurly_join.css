@@ -57,8 +57,12 @@ main #join_frm .user_info dl dd input::placeholder {
     font-size:0.8rem; color:#aaa; letter-spacing:-0.2px;
     position:relative; bottom:3px;
 }
+/* 위치 임의로 조정(생년월일 글씨) */
 main #join_frm .user_info dl dd input[name^=birth] {
     position:relative; bottom:2px;
+}
+main #join_frm .user_info dl dd span {
+    position:relative; bottom:4px;
 }
 /* 휴대폰 디자인 */
 main #join_frm .user_info dl dd select[name=agency] {
