@@ -1,14 +1,15 @@
-main {text-align:center; color:#191919;}
+main {text-align:center;}
 /* 배경 공통&개별값 */
-main .bg > section {width:1250px; margin:0 auto; /* background-color:coral; */}
+main .bg > section {width:1250px; margin:0 auto; background-color:coral;}
 main .bg {
     background-position:center;
     background-repeat:no-repeat;
 }
 main .bg1 {
-    background-color:#191919;
-    height:1000px;
+    background-image:url(../images/bg1.jpg);
+    height:2000px;
 }
+
 /* -------------------- 1. 표지 -------------------- */
 main .bg1 .bg1_1 {}
 main .bg1 .bg1_1 h1 {padding-top:150px;}
@@ -33,7 +34,7 @@ main .bg1 .bg1_2 .btn {
 }
 main .bg1 .bg1_2 .btn .tutorial_btn,
 main .bg1 .bg1_2 .btn .download_btn {
-    font-size:2.5rem; font-weight:700; margin-bottom:172px;
+    font-size:2.5rem; font-weight:700; margin-bottom:150px;
     padding:25px 55px; border-radius:60px;
     background:linear-gradient(90deg, #6CF460, #806BFB);
 }
@@ -49,4 +50,40 @@ main .bg1 .bg1_2 .btn .download_btn::after {
     display:inline-block;
     margin-left:25px;
 }
+main .bg2 {}
+main .bg2 section {background-color:#191919; border-radius:50px; height:2300px; padding:150px 0;}
+main .bg2 section .event_time {
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+main .bg2 section .event_time h1 {
+    font-size:4.375rem; font-weight:700; color:#fff;
+    letter-spacing:-0.2px;
+    width:421px; line-height:111px; background:linear-gradient(-60deg, #FF3A64, #6CF460);
+    border-radius:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* event 제목 양옆 데코 가상선택자 */
+main .bg2 section .event_time h1::before {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    width:35px; height:35px;
+    margin-right:15px;
+}
+main .bg2 section .event_time h1::after {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    width:35px; height:35px;
+    margin-left:15px;
+}
+main .bg2 section .event_time h2 {}
+main .bg2 section .event_time h3 {}
+main .bg2 section .event_time .limit_time {}
+main .bg2 section .event_time .limit_time .count {}
+
 

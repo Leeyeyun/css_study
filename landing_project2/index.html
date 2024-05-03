@@ -16,6 +16,7 @@
 </head>
 <body>
     <main><!-- 12 group 묶음 -->
+        <!--------------------------- 1. 표지 --------------------------->
         <div class="bg bg1">
             <section class="bg1_1">
                 <h1><a href="#"><img src="./images/epik_logo.svg" alt="epik"></a></h1>
@@ -30,7 +31,55 @@
                 </div>
             </section>
         </div>
-        <div class="bg bg2"></div>
+        <!--------------------------- 2. 쿠폰 --------------------------->
+        <div class="bg bg2">
+            <section>
+                <div class="event_time">
+                    <h1>EVENT</h1>
+                    <h2>퀴즈 풀고 EPIK에서 사용할 수 있는<br>쿠폰을 받아보세요!</h2>
+                    <h3>퀴즈 종료까지</h3>
+                    <div class="limit_time">
+                        <div class="count">
+                            <span>00</span>:<span>07</span>:<span>36</span>
+                        </div>
+                        <div class="date">
+                            <p>DAYS</p>
+                            <p>HOURS</p>
+                            <p>MINS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_quiz">
+                    <h2>Q. EPIK에서 새로 출시한 AI 필터는?</h2>
+                    <form action="#" method="get" id="quiz_frm">
+                        <fieldset class="quiz_radio">
+                            <legend class="skip">퀴즈 양식</legend>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="ai" value="christmas" id="christmas">
+                                    <label for="christmas">AI 크리스마스</label>
+                                    <label for="christmas"><img src="./images/ai_christmas.png" alt=""></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="ai" value="yearbook" id="yearbook">
+                                    <label for="yearbook">AI 이어북</label>
+                                    <label for="yearbook"><img src="./images/ai_yearbook.png" alt=""></label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="ai" value="avata" id="avata">
+                                    <label for="avata">AI 아바타</label>
+                                    <label for="avata"><img src="./images/ai_avata.png" alt=""></label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <div class="btn">
+                            <button type="button">정답 확인하기</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="event_coupon"></div>
+            </section>
+        </div>
     </main>
 </body>
 </html>
