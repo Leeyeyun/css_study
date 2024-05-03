@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0503 | position2</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        main {
+            width:500px; height:500px; background-color:gray; margin:30px auto 0;
+            /* a~d 자식박스를 absolute로 움직일 때 기준이 되는 부모 설정 */
+            position:relative;
+        }
+        /* absolute 이용해서 요소 배치시 중첩위치가 생기면 태그 작성 순서에 따라 기본 배치가 결정된다. */
+        /* z-index 수동으로 설정하는 중첩순서 속성, 단위사용안함, 0~999 */
+        /* 사이트 접속 시 함께 실행되는 일회성 이벤트 및 주요 공지사항은 z-index가 999로 최대값으로 사용된다. */
+        /* z-index 속성은 position의 추가속성이기 때문에 position 속성없이 사용할 수 없다. */
+        main .box {width:100px; height:100px; position:absolute;}
+        main .a {z-index:500; left:0; top:0; background-color:aqua;}
+        main .b {z-index:400; left:50px; top:50px; background-color:lime;}
+        main .c {z-index:300; left:100px; top:100px; background-color:yellow;}
+        main .d {z-index:200; left:150px; top:150px; background-color:pink;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box a">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+    </main>
+</body>
+</html>
