@@ -34,6 +34,12 @@ main .bg8 {
 main .bg9 {
     background-image:url(../images/bg_9.jpg);
 }
+main .bg10 {
+    background-image:url(../images/bg_10.jpg);
+}
+main .bg10 {
+    background-color:#e4e5ea;
+}
 main .bg section .sub_title {
     font-size:3.438rem; font-weight:500; color:#fff;
     text-align:center; line-height:1.2;
@@ -256,23 +262,46 @@ main .bg8 section .container .a3 .activity {margin-top:380px;}
 main .bg8 section .container .container_half .activity h3 {font-size:1.25rem; font-weight:700; color:#fff;}
 main .bg8 section .container .container_half .activity p {
     color:#fff; line-height:1.2; margin-top:15px;
+    /* absolute 설정 요소는 블록 요소여도 inline-block처럼 내용 크기만큼만 인식한다 */
+    /* absolute 설정 요소의 기본 너비100%를 유지하고 싶다면 반드시 width:100%를 추가로 입력해서 적용해야 한다! */
 }
 main .bg8 section .container .half1 {
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-between;
 }
-/* 9. 선물 */
+/* -------------------- 9. 선물 -------------------- */
 main .bg9 section {padding:110px 0;}
 main .bg9 section .bg9_top {
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
-main .bg9 section .bg9_top h2 {text-align:left;}
+main .bg9 section .bg9_top .sub_title {text-align:left;}
+main .bg9 section .bg9_top .sponsor_link {margin:0;}
 main .bg9 section .container {
     margin:80px 0 70px;
     display:flex;
     justify-content:space-between;
 }
 main .bg9 section .container .goods {text-align:center;}
+main .bg9 section .container .goods p:last-child {
+    font-size:1.25rem; color:#fff; line-height:1.7;
+    margin:30px 0 70px;
+}
+main .bg9 section > p {
+    background-color:#fff; color:#2E3148;
+    font-size:1.25rem;
+    display:inline; line-height:29px;
+    float:right;
+}
+/* -------------------- 10. 마무리 -------------------- */
+main .bg10 section {padding:110px 0; text-align:center;}
+main .bg10 section h1 {font-size:4.375rem; font-weight:700; letter-spacing:-0.2px; line-height:1.2; color:#fff;}
+main .bg10 section p {
+    margin:60px 0 110px; font-size:2.125rem; font-weight:700; color:#fff;
+}
+/* -------------------- 11. 결제안내사항 -------------------- */
+main .bg11 section {padding:110px 0;}
+main .bg11 section h3 {font-size:1.25rem; font-weight:700; margin-bottom:30px;}
+main .bg11 section p {line-height:2;}
