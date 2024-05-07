@@ -291,3 +291,15 @@ ex) `flex-flow:column wrap;` : 세로열 기준으로 자동 줄바꿈 처리
 * grow(증가) + shrink(감소) + basis(기본)을 한번에 작성하는 속성
 * `flex:1 0 auto` : grow:1 shrink:0 basis:auto
 * `flex:1;` : container 내 item들을 1:1:1..의 비율로 넓이 설정
+# 24.05.07
+## VS code emmet기능(기본기능)
+* 꺽쇠 없이 태그명 작성 후 Tab 자동완성
+* 특정 태그에 필수속성이 있을 때 속성이 함께 출력
+* 자동으로 안나오는 속성은 `태그:속성` Tab 출력
+* 클래스명 또는 아이디명을 쓰고 싶을 때
+ex) `div.box` ---> `<div class="box"></div>`
+ex) `div#box` ---> `<div id="box"></div>`
+* 목록태그 작성할 때 **태그>자식태그*자식개수**
+ex) `ul.list>li*3`
+* 형제태그 함께 작성할 때 **태그>이전형제+다음형제**
+ex) dl#test>dt+dd*2
