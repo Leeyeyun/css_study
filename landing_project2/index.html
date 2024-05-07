@@ -22,7 +22,7 @@
                 <h1><a href="#"><img src="./images/epik_logo.svg" alt="epik"></a></h1>
                 <h2><em>AI 필터의 혁신</em>과 <em>자연스러움</em>이 만나는 곳,<br>당신의 사진을 더 아름답게</h2>
             </section>
-            <p class="main_img"><img src="./images/epik_main.png" alt="epik"></p>
+            <div class="main_img"><img src="./images/epik_main.png" alt="epik"></p>
             <section class="bg1_2">
                 <h2>지금 바로 <strong>EPIK</strong>으로<br>사진을 더욱 풍부하게 보정해보세요!</h2>
                 <div class="btn">
@@ -31,11 +31,11 @@
                 </div>
             </section>
         </div>
-        <!--------------------------- 2. 쿠폰 --------------------------->
+        <!--------------------------- 2. 퀴즈 --------------------------->
         <div class="bg bg2">
             <section>
                 <div class="event_time">
-                    <h1>EVENT</h1>
+                    <h1>QUIZ</h1>
                     <h2>퀴즈 풀고 EPIK에서 사용할 수 있는<br>쿠폰을 받아보세요!</h2>
                     <h3>퀴즈 종료까지</h3>
                     <div class="limit_time">
@@ -56,19 +56,25 @@
                             <legend class="skip">퀴즈 양식</legend>
                             <ul>
                                 <li>
-                                    <input type="radio" name="ai" value="christmas" id="christmas">
-                                    <label for="christmas">AI 크리스마스</label>
                                     <label for="christmas"><img src="./images/ai_christmas.png" alt=""></label>
+                                    <span class="check">
+                                        <input type="radio" name="ai" value="christmas" id="christmas">
+                                        <label for="christmas">AI 크리스마스</label>
+                                    </span>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ai" value="yearbook" id="yearbook">
-                                    <label for="yearbook">AI 이어북</label>
                                     <label for="yearbook"><img src="./images/ai_yearbook.png" alt=""></label>
+                                    <span class="check">
+                                        <input type="radio" name="ai" value="yearbook" id="yearbook">
+                                        <label for="yearbook">AI 이어북</label>
+                                    </span>
                                 </li>
                                 <li>
-                                    <input type="radio" name="ai" value="avata" id="avata">
-                                    <label for="avata">AI 아바타</label>
                                     <label for="avata"><img src="./images/ai_avata.png" alt=""></label>
+                                    <span class="check">
+                                        <input type="radio" name="ai" value="avata" id="avata">
+                                        <label for="avata">AI 아바타</label>
+                                    </span>
                                 </li>
                             </ul>
                         </fieldset>
@@ -77,9 +83,25 @@
                         </div>
                     </form>
                 </div>
-                <div class="event_coupon"></div>
+                <div class="event_coupon">
+                    <h2><em>EPIK</em><span class="pro">Pro</span>에서만 경험할 수 있는<br>서비스를 지금 바로 시작해보세요!</h2>
+                    <ul class="coupon_wrap">
+                        <li>
+                            <h3>COUPON</h3>
+                            <p><em>EPIK</em><span class="pro">Pro</span>1개월 무료</p>
+                            <p><del>월 5,500원</del><span>0원</span></p>
+                        </li>
+                        <li>
+                            <h3>COUPON</h3>
+                            <p><em>AI 아바타</em> 1회 무료</p>
+                            <p><del>1회 4,400원</del><span>0원</span></p>
+                        </li>
+                    </ul>
+                    <p>* 앱 내에서만 적용가능한 쿠폰입니다. 자세한 내용은 EPIK 앱 공지사항을 확인하세요.</p>
+                </div>
             </section>
         </div>
+        <div class="bg bg3"></div>
     </main>
 </body>
 </html>

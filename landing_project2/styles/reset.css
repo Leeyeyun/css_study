@@ -24,3 +24,11 @@ fieldset {border:0;}
 /* 숨기고 싶은 속성 */
 .skip {display:none;}
 input, button, label {cursor:pointer;}
+/* font-awesome 적용속성값 */
+.fa {
+    font-weight:600;
+    font-family:
+        'Font Awesome 5 free'
+        'Font Awesome 5 Brands'
+        'Font Awesome 5 solid';
+}

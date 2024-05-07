@@ -1,6 +1,6 @@
-main {text-align:center;}
+main {text-align:center; /* width:1920px; */}
 /* 배경 공통&개별값 */
-main .bg > section {width:1250px; margin:0 auto; background-color:coral;}
+main .bg > section {width:1250px; margin:0 auto;}
 main .bg {
     background-position:center;
     background-repeat:no-repeat;
@@ -8,6 +8,10 @@ main .bg {
 main .bg1 {
     background-image:url(../images/bg1.jpg);
     height:2000px;
+}
+main .bg3 {
+    background-image:url(../images/bg3.jpg);
+    height:672px;
 }
 
 /* -------------------- 1. 표지 -------------------- */
@@ -19,7 +23,7 @@ main .bg1 .bg1_1 h2 {
 }
 main .bg1 .bg1_1 h2 em {font-weight:700; color:#6CF460; }
 main .bg1 .bg1_1 h2 em:nth-child(2) {font-weight:700; color:#806BFB;}
-main .bg1 p {}
+main .bg1 .main_img {margin:0 auto;}
 main .bg1 .bg1_2 {}
 main .bg1 .bg1_2 h2 {
     font-size:3.438rem; font-weight:500;
@@ -29,6 +33,7 @@ main .bg1 .bg1_2 h2 {
 main .bg1 .bg1_2 h2 strong {font-size:4.375rem; font-weight:900;}
 /* 1.표지-버튼 공통 */
 main .bg1 .bg1_2 .btn {
+    width:1062px; margin:0 auto;
     display:flex;
     justify-content:space-between;
 }
@@ -38,8 +43,6 @@ main .bg1 .bg1_2 .btn .download_btn {
     padding:25px 55px; border-radius:60px;
     background:linear-gradient(90deg, #6CF460, #806BFB);
 }
-main .bg1 .bg1_2 .btn .tutorial_btn {margin-left:106px;}
-main .bg1 .bg1_2 .btn .download_btn {margin-right:106px;}
 /* 1.표지-버튼 화살표 가상선택자 */
 main .bg1 .bg1_2 .btn .tutorial_btn::after,
 main .bg1 .bg1_2 .btn .download_btn::after {
@@ -50,6 +53,7 @@ main .bg1 .bg1_2 .btn .download_btn::after {
     display:inline-block;
     margin-left:25px;
 }
+/* -------------------- 2. 퀴즈 -------------------- */
 main .bg2 {}
 main .bg2 section {background-color:#191919; border-radius:50px; height:2300px; padding:150px 0;}
 main .bg2 section .event_time {
@@ -58,9 +62,9 @@ main .bg2 section .event_time {
     align-items:center;
 }
 main .bg2 section .event_time h1 {
-    font-size:4.375rem; font-weight:700; color:#fff;
+    font-size:3.75rem; font-weight:700; color:#fff;
     letter-spacing:-0.2px;
-    width:421px; line-height:111px; background:linear-gradient(-60deg, #FF3A64, #6CF460);
+    width:345px; height:104px; background:linear-gradient(-60deg, #FF3A64, #6CF460);
     border-radius:90px;
     display:flex;
     justify-content:center;
@@ -81,9 +85,88 @@ main .bg2 section .event_time h1::after {
     width:35px; height:35px;
     margin-left:15px;
 }
-main .bg2 section .event_time h2 {}
-main .bg2 section .event_time h3 {}
-main .bg2 section .event_time .limit_time {}
-main .bg2 section .event_time .limit_time .count {}
-
-
+main .bg2 section .event_time h2 {
+    font-size:3.438rem; font-weight:500; color:#fff;
+    line-height:1.3; letter-spacing:0.2px;
+    margin:80px 0 66px;
+}
+/* 2.퀴즈 - 제한시간  */
+main .bg2 section .event_time h3 {
+    font-size:1.625rem; color:#FF3A64;
+}
+main .bg2 section .event_time .limit_time {
+    margin:40px 0 135px;
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+main .bg2 section .event_time .limit_time .count {
+    font-size:3.438rem; font-weight:500; letter-spacing:-0.2px; color:#636363;
+}
+main .bg2 section .event_time .limit_time .count span {
+    color:#fff; margin:0 31px;
+    width:130px; line-height:120px; background-color:#000;border-radius:20px;
+    display:inline-block;
+}
+main .bg2 section .event_time .limit_time .date {
+    width:511px;
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+main .bg2 section .event_time .limit_time .date p {
+    font-size:2.5rem; font-weight:200; color:#636363;
+}
+/* 2.퀴즈 - checkbox  */
+main .bg2 section .event_quiz {}
+main .bg2 section .event_quiz h2 {color:#fff; font-size:2.5rem;}
+main .bg2 section .event_quiz #quiz_frm {}
+main .bg2 section .event_quiz #quiz_frm .quiz_radio {}
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul {
+    padding:0 106px; margin:50px 0 44px;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+}
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li {
+    display:flex;
+    flex-flow:column nowrap;
+}
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li > label {
+    margin-bottom:20px;
+}
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li .check {
+    height:25px;
+    display:flex;
+    justify-content:center;
+}
+/* 2.퀴즈 - 기존 radio 제거 */
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li .check input[name=ai] {display:none;}
+/* 2.퀴즈 - radio 활성화 시 */
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li .check input[name=ai]:checked+label {background-image:url(../images/checked_epik.svg);}
+/* 2.퀴즈 - radio 비활성화(기본) */
+main .bg2 section .event_quiz #quiz_frm .quiz_radio ul li .check label {
+    background-image:url(../images/unchecked_epik.svg);
+    background-repeat:no-repeat;
+    padding-left:50px;
+    font-size:1.25rem; color:#fff;
+}
+main .bg2 section .event_quiz #quiz_frm .btn {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+main .bg2 section .event_quiz #quiz_frm .btn button {
+    padding:16px 40px;
+    border:4px solid #FF3A64; border-radius:60px;
+    font-size:1.625rem; color:#FF3A64;
+    background-color:#191919;
+}
+main .bg2 section .event_quiz #quiz_frm .btn button::after {
+    content:'';
+    background-image:url(../images/double_arrow_right.svg);
+    background-repeat:no-repeat;
+    width:24px; height:24px;
+    display:inline-block;
+    margin-left:12px;
+}
