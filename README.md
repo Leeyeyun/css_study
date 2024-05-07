@@ -303,3 +303,6 @@ ex) `div#box` ---> `<div id="box"></div>`
 ex) `ul.list>li*3`
 * 형제태그 함께 작성할 때 **태그>이전형제+다음형제**
 ex) dl#test>dt+dd*2
+* meta 자주 쓰는 속성
+-> keywords : `meta:kw`
+-> description :`meta:desc`
