@@ -1,0 +1,16 @@
+/* 반응형웹 reponsive.css */
+/* 기존 CSS에서 변경되는 사항만 작성한다. */
+/* media 조건 시작값 max 기준 사이트너비값 주로 이용 */
+@media screen and (max-width:1300px) {
+    header nav {display:none;}
+    main .visual video {width:1300px;}
+    main .creator {width:100%;}
+}/* ~1300px 이하일 때 */
+@media screen and (max-width:760px) {
+    header h1 {width:225.75px;}
+    main .creator .population {
+        flex-flow:row wrap;
+    }
+    main .creator .population dl {width:calc(100% / 2);}
+    main .creator .population dl:last-child {width:100%;}
+}/* 760px 이하일 때 */

@@ -1,0 +1,83 @@
+header {
+    /* figma 1920(full) 1920px(X) 100%(O) */
+    /* width:100%;(기본값) */
+    /* min-width(320~360), max-width(100%) */
+    min-width:360px; height:80px;
+    padding:0 16px; background-color:#000;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+header h1 {
+    width:301px; /* height:40px; */
+    /* img태그가 들어가는 부모요소에 크기 입력 시 꼭 필요한 경우가 아니면 width, height 둘 다 입력하지 않고 width값만 입력하여 height값은 비율에 맞게 자동으로 설정되게 입력한다. */
+}
+header h1 a {}
+header h1 a img {
+    /* img태그는 inline태그여도 원본 이미지 px고유값을 가지고 있기 때문에 부모의 크기가 변경돼도 상대값으로 따라가지 않는다. */
+    width:100%;
+}
+header nav {}
+header nav a {
+    color:#fff; font-size:1.25rem;
+    margin-right:24px;
+}
+header nav a:last-child {margin-right:0;}
+/* a 상태선택자 : (동적)마우스 올렸을 때 */
+header nav a:hover {color:#bbb;}
+header .snb {
+    display:flex;
+    align-items:center;
+}
+header .snb a:first-child {
+    color:#fff; font-size:1.25rem;
+    border:2px solid #fff; border-radius:5px;
+    line-height:39px;
+    padding:0 10px; margin-right:24px;
+}
+header .snb a:last-child {
+    width:36px;
+    /* display:inline-block; 부모가 flex 설정되면 생략가능 */
+}
+header .snb a img {width:100%; filter:invert(1);}
+/* .snb a 상태선택자 */
+header .snb a:first-child:hover {
+    border-color:#ff0;
+}
+header .snb a:last-child:hover img {filter:invert(1) opacity(50%);}
+/* =============== main1. 영상, 시작하기 버튼 =============== */
+main {}
+main .visual {
+    height:720px; overflow:hidden;
+    position:relative; /* 부모 설정해서 absolute 적용 가능하게 */
+}
+main .visual video {width:100%;}
+main .visual .visual_title {
+    position:absolute; left:0; top:0; width:100%; text-align:center; top:238px;
+    /* 겹치는 형제요소 디자인작업을 위한 absolute */
+    /* 1. 겹치는 대상에 absolute 설정 후 부모확인을 위해 left:0; top:0; 초기값 설정(부모의 왼쪽위로 배치) */
+    /* 2. 배치된 위치가 원하는 부모 위치가 아닐 때->원하는 부모 대상에 position 추가 속성을 이용해서 부모설정하기 */
+}
+main .visual .visual_title h2 {font-size:3rem; font-weight:700; color:#fff; line-height:1.2; margin-bottom:50px;}
+main .visual .visual_title .start_link {
+    width:160px; line-height:54px; display:inline-block;
+    color:#fff; background-color:#000; border-radius:10px;
+}
+main .visual .visual_title .start_link:hover {
+    background:#fff; color:#000; font-weight:700;
+}
+/* =============== main2. 크리에이터 =============== */
+main .creator {text-align:center; margin:150px auto; width:1300px;}
+main .creator h2 {font-size:3rem; font-weight:700;}
+main .creator p:nth-child(2) {font-size:1.25rem; line-height:1.5; margin:55px 0;}
+main .creator p:last-child {width:697px;}
+main .creator p img {width:100%;}
+main .creator .population {
+    margin-top:55px;
+    display:flex;
+}
+main .creator .population dl {
+    width:calc(100% / 3);
+}
+main .creator .population dl dt {font-size:2rem; font-weight:700;}
+main .creator .population dl dd {font-size:1.25rem; margin-top:10px;}
