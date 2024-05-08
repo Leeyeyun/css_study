@@ -170,3 +170,43 @@ main .bg2 section .event_quiz #quiz_frm .btn button::after {
     display:inline-block;
     margin-left:12px;
 }
+/* 2. 퀴즈 : 쿠폰 */
+main .bg2 section .event_coupon {}
+main .bg2 section .event_coupon h2 {
+    font-size:2.5rem; color:#fff; line-height:1.5;
+    margin:175px 0 159px;
+}
+main .bg2 section .event_coupon h2 em {
+    font-size:3.125rem; font-weight:700; letter-spacing:-0.2px;
+    position:relative; top:3px;
+}
+main .bg2 section .event_coupon h2 .pro {
+    background:linear-gradient(-60deg, #806BFB, #6CF460);
+    font-size:1.563rem; font-weight:700; letter-spacing:-0.4px;
+    width:98px; line-height:46px; border-radius:48px;
+    margin:0 16px 0 10px;
+    display:inline-block;
+    position:relative; bottom:5px;
+}
+main .bg2 section .event_coupon h2 .pro::before {
+    content:'';
+    background-image:url(../images/pro_shine.svg);
+    background-repeat:no-repeat;
+    width:18px; height:18px;
+    display:inline-block;
+    margin-right:5px;
+}
+main .bg2 section .event_coupon .coupon_wrap {
+    margin:0 auto; width:1068px;
+    display:flex;
+    justify-content:space-between;
+}
+main .bg2 section .event_coupon .coupon_wrap li {
+    width:504px; height:231px;
+    background-image:url(../images/coupon_bg.svg);
+}
+main .bg2 section .event_coupon .coupon_wrap li h3 {font-size:1.625rem; font-weight:500; color:#FF3A64;}
+main .bg2 section .event_coupon .coupon_wrap li h3 p {}
+main .bg2 section .event_coupon .coupon_wrap li h3 p em {}
+main .bg2 section .event_coupon .coupon_wrap li h3 p span {}
+main .bg2 section .event_coupon .coupon_wrap li h3 p del {}
