@@ -5,12 +5,29 @@
     header nav {display:none;}
     main .visual video {width:1300px;}
     main .creator {width:100%;}
+    main .world section {width:100%;}
+    main .million {width:100%;}
+    main .million .creator_character li:last-child {display:none;}
+    main .million .creator_character li {width:calc((100% - 32px) / 4);}
 }/* ~1300px 이하일 때 */
 @media screen and (max-width:760px) {
     header h1 {width:225.75px;}
-    main .creator .population {
-        flex-flow:row wrap;
-    }
+    main .creator .population {flex-flow:row wrap;}
     main .creator .population dl {width:calc(100% / 2);}
     main .creator .population dl:last-child {width:100%;}
+    main .world section .item_wrap {
+        flex-flow:column wrap;
+        align-items:center;
+    }
+    main .world section .item_wrap .item {
+        width:calc(100% - 32px); height:150px; padding:0 50px;
+        flex-flow:row nowrap;
+        justify-content:space-between;
+        margin-bottom:20px;
+    }
+    main .world section .item_wrap .item:last-child {margin-bottom:0;}
+    main .million h2 {font-size:2.188rem;}
+    main .million p {font-size:1rem;}
+    main .million .creator_character li:nth-child(4) {display:none;}
+    main .million .creator_character li {width:calc((100% - 32px) / 3);}
 }/* 760px 이하일 때 */
