@@ -233,7 +233,7 @@ main .bg2 section .event_coupon .coupon_wrap li {
 }
 /* 쿠폰 상단 다운로드 버튼 */
 main .bg2 section .event_coupon .coupon_wrap li .download {
-    background-color:#fff; padding:30px; border-radius:79px;
+    background-color:#fff; padding:26.88px 29.57px; border-radius:50px; 
     filter:drop-shadow(0 0 8px rgba(0,0,0,0.2));
     position:absolute; right:30px; top:-51px;
 } 
@@ -305,6 +305,57 @@ main .bg section .pick_title {color:#fff; font-size:4.375rem; font-weight:500; l
 main .bg section .pick_title strong {font-weight:900;}
 main .bg section .pick_contents {color:#fff; font-size:2.5rem; letter-spacing:-0.2px; line-height:1.3; margin-top:40px;}
 main .bg section .pick_contents em {font-weight:700;}
-main .bg .item_wrap {margin-top:133px;}
-main .bg .item_wrap .item {}
-main .bg .item_wrap .item img {border-radius:15px;}
+/* 템플릿 이미지 디자인 */
+main .bg .item_wrap {
+    width:100%;
+    margin-top:133px;
+    display:flex; justify-content:center; align-items:center;
+}
+main .bg .item_wrap .item img {
+    border:17px solid #fff; border-radius:15px;
+    filter:drop-shadow(0 0 10px rgba(0,0,0,50%));
+}
+/* 겹침 디자인 */
+main .bg .item_wrap .item1, main .bg .item_wrap .item2, main .bg .item_wrap .item3 {margin-right:-39px;}
+main .bg .item_wrap .item5, main .bg .item_wrap .item6, main .bg .item_wrap .item7 {margin-left:-39px;}
+/* z-index 설정 */
+main .bg .item_wrap .item1, main .bg .item_wrap .item7 {position:relative; z-index:1;}
+main .bg .item_wrap .item2, main .bg .item_wrap .item6 {position:relative; z-index:2;}
+main .bg .item_wrap .item3, main .bg .item_wrap .item5 {position:relative; z-index:3;}
+main .bg .item_wrap .item4 {position:relative; z-index:4;}
+/* ================== 6. Pick2 ================== */
+main .bg6 section {text-align:left; padding-top:150px;}
+main .bg6 section .pick_title {color:#000;}
+main .bg6 section .pick_contents {color:#000; margin-bottom:80px;}
+main .bg6 section .wallpaper {
+    border-bottom:3px solid #636363;margin-bottom:150px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+main .bg6 section .wallpaper::before, 
+main .bg6 section .wallpaper::after {
+    content:'';
+    background-image:url(../images/line_point.svg);
+    background-repeat:no-repeat;
+    width:32px; height:32px;
+    display:inline-block;
+    position:relative; top:258px; z-index:2;
+}
+main .bg6 section .wp2::before, 
+main .bg6 section .wp2::after {width:50px; height:40px; top:280px;}
+main .bg6 section .wp3::before, 
+main .bg6 section .wp3::after {top:277px;}
+main .bg6 section .wallpaper p {}
+main .bg6 section .wallpaper .wp_info {}
+main .bg6 section .wallpaper .wp_info h3 {
+    display:flex; align-items:center;
+    margin-bottom:50px;
+}
+main .bg6 section .wp2 .wp_info h3 {flex-flow:row wrap;}
+main .bg6 section .wp2 .wp_info h3 span {position:relative; left:60px;}
+main .bg6 section .wallpaper .wp_info h3 em {
+    font-size:2.125rem; font-weight:700;
+    padding:0 20px; line-height:60px; border-radius:30px; background-color:#e0e0e0;
+}
+main .bg6 section .wallpaper .wp_info h3 strong {font-size:1.625rem; font-weight:700; margin:0 10px 0 15px;}
+main .bg6 section .wallpaper .wp_info h3 span {font-size:1.625rem;}
+main .bg6 section .wallpaper .wp_info p {font-size:1.25rem; line-height:1.7; margin-left:60px;}
