@@ -2,6 +2,7 @@ main {text-align:center; /* width:1920px; */}
 /* 배경 공통&개별값 */
 main .bg > section {width:1250px; margin:0 auto;}
 main .bg {
+    width:100%;
     background-position:center;
     background-repeat:no-repeat;
 }
@@ -11,10 +12,10 @@ main .bg1 {
 }
 main .bg3 {
     background-image:url(../images/bg3.jpg);
-    height:672px;
+    height:672px; width:100%;
 }
 
-/* -------------------- 1. 표지 -------------------- */
+/* ================== 1. 표지 ================== */
 main .bg1 .bg1_1 {}
 main .bg1 .bg1_1 h1 {padding-top:150px;}
 main .bg1 .bg1_1 h2 {
@@ -38,14 +39,16 @@ main .bg1 .bg1_2 .btn {
     justify-content:space-between;
 }
 main .bg1 .bg1_2 .btn .tutorial_btn,
-main .bg1 .bg1_2 .btn .download_btn {
+main .bg1 .bg1_2 .btn .download_btn,
+main .bg4 section .touch .touch_right .more_link button {
     font-size:2.5rem; font-weight:700; margin-bottom:150px;
     padding:25px 55px; border-radius:60px;
     background:linear-gradient(90deg, #6CF460, #806BFB);
 }
 /* 1.표지-버튼 화살표 가상선택자 */
 main .bg1 .bg1_2 .btn .tutorial_btn::after,
-main .bg1 .bg1_2 .btn .download_btn::after {
+main .bg1 .bg1_2 .btn .download_btn::after,
+main .bg4 section .touch .touch_right .more_link button::after {
     content:'';
     background-image:url(../images/arrow.svg);
     background-repeat:no-repeat;
@@ -53,7 +56,7 @@ main .bg1 .bg1_2 .btn .download_btn::after {
     display:inline-block;
     margin-left:25px;
 }
-/* -------------------- 2. 퀴즈 -------------------- */
+/* ================== 2. 퀴즈 ================== */
 main .bg2 {}
 main .bg2 section {background-color:#191919; border-radius:50px; height:2300px; padding:150px 0;}
 main .bg2 section .event_time {
@@ -70,6 +73,7 @@ main .bg2 section .event_time h1 {
     justify-content:center;
     align-items:center;
 }
+main .bg2 section .event_time h1 span {position:relative; bottom:5px;}
 /* event 제목 양옆 데코 가상선택자 */
 main .bg2 section .event_time h1::before {
     content:'';
@@ -156,11 +160,17 @@ main .bg2 section .event_quiz #quiz_frm .btn {
     justify-content:center;
     align-items:center;
 }
+/* 정답확인하기 버튼 */
 main .bg2 section .event_quiz #quiz_frm .btn button {
     padding:16px 40px;
     border:4px solid #FF3A64; border-radius:60px;
     font-size:1.625rem; color:#FF3A64;
     background-color:#191919;
+}
+/* 정답확인하기 버튼 활성화 */
+main .bg2 section .event_quiz #quiz_frm .btn button:hover {
+    background-color:rgba(255,255,255,0.05);
+    
 }
 main .bg2 section .event_quiz #quiz_frm .btn button::after {
     content:'';
@@ -180,15 +190,24 @@ main .bg2 section .event_coupon h2 em {
     font-size:3.125rem; font-weight:700; letter-spacing:-0.2px;
     position:relative; top:3px;
 }
+/* pro 글씨 개별 디자인 모음 */
 main .bg2 section .event_coupon h2 .pro {
     background:linear-gradient(-60deg, #806BFB, #6CF460);
     font-size:1.563rem; font-weight:700; letter-spacing:-0.4px;
-    width:98px; line-height:46px; border-radius:48px;
+    width:98px; line-height:46px; border-radius:48px; padding-bottom:2px;
     margin:0 16px 0 10px;
     display:inline-block;
     position:relative; bottom:5px;
 }
-main .bg2 section .event_coupon h2 .pro::before {
+main .bg2 section .event_coupon .coupon_wrap li .coupon_contents .pro {
+    background:linear-gradient(-60deg, #806BFB, #6CF460);
+    font-size:1.563rem; font-weight:700; letter-spacing:-0.4px;
+    width:98px; line-height:46px; border-radius:48px;
+    color:#fff; display:flex; justify-content:center; align-items:center;
+    margin-right:10px; padding-bottom:2px;
+}
+main .bg2 section .event_coupon h2 .pro::before,
+main .bg2 section .event_coupon .coupon_wrap li .coupon_contents .pro::before {
     content:'';
     background-image:url(../images/pro_shine.svg);
     background-repeat:no-repeat;
@@ -196,6 +215,7 @@ main .bg2 section .event_coupon h2 .pro::before {
     display:inline-block;
     margin-right:5px;
 }
+/* e: pro 글씨 개별 디자인 모음 */
 main .bg2 section .event_coupon .coupon_wrap {
     margin:0 auto; width:1068px;
     display:flex;
@@ -204,9 +224,87 @@ main .bg2 section .event_coupon .coupon_wrap {
 main .bg2 section .event_coupon .coupon_wrap li {
     width:504px; height:231px;
     background-image:url(../images/coupon_bg.svg);
+    padding:35px; text-align:left;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    position:relative;
+}
+/* 쿠폰 상단 다운로드 버튼 */
+main .bg2 section .event_coupon .coupon_wrap li .download {
+    background-color:#fff; padding:30px; border-radius:79px;
+    filter:drop-shadow(0 0 8px rgba(0,0,0,0.2));
+    position:absolute; right:30px; top:-51px;
+} 
+/* 쿠폰 상단 다운로드 버튼 활성화 */
+main .bg2 section .event_coupon .coupon_wrap li .download:hover {
+    background-color:#FFDFE6;
+
 }
 main .bg2 section .event_coupon .coupon_wrap li h3 {font-size:1.625rem; font-weight:500; color:#FF3A64;}
-main .bg2 section .event_coupon .coupon_wrap li h3 p {}
-main .bg2 section .event_coupon .coupon_wrap li h3 p em {}
-main .bg2 section .event_coupon .coupon_wrap li h3 p span {}
-main .bg2 section .event_coupon .coupon_wrap li h3 p del {}
+main .bg2 section .event_coupon .coupon_wrap li .coupon_contents {
+    font-size:2.5rem; font-weight:500; letter-spacing:-0.2px;
+    display:flex;
+    align-items:center;
+}
+main .bg2 section .event_coupon .coupon_wrap li .coupon_contents em {font-size:3.125rem; font-weight:700; letter-spacing:-0.2px; margin-right:10px;}
+main .bg2 section .event_coupon .coupon_wrap li .coupon_contents .pro {}
+main .bg2 section .event_coupon .coupon_wrap li p {font-size:1.625rem; font-weight:500; color:#191919;}
+main .bg2 section .event_coupon .coupon_wrap li p del {font-size:1.25rem; color:#636363; margin-right:14px;}
+main .bg2 section .event_coupon > p {font-size:1.25rem; color:#636363; margin-top:60px;}
+/* ================== 3. 배너 ================== */
+/* ================== 4. 터치보정(영상) ================== */
+main .bg4 {background-color:#191919; padding:150px 0;}
+main .bg4 section {}
+main .bg4 section h2 {font-size:3.125rem; letter-spacing:-0.2px; line-height:1.3; color:#fff; margin-bottom:100px;}
+main .bg4 section h2 strong {font-weight:700;}
+main .bg4 section .touch {
+    width:100%;
+    display:flex; justify-content:space-between; align-items:center;
+}
+main .bg4 section .touch .video {width:415px;}
+main .bg4 section .touch .touch_right {}
+main .bg4 section .touch .touch_right h3 {font-size:1.625rem; line-height:1.5; color:#fff;}
+main .bg4 section .touch .touch_right h3 .pink_highlight {font-weight:700; color:#FF3A64;}
+main .bg4 section .touch .touch_right .bf_af {
+    display:flex; position:relative;
+    margin:40px 0 78px;
+}
+main .bg4 section .touch .touch_right .bf_af .bf_to_af {
+    position:absolute; left:279px; top:160px;
+}
+main .bg4 section .touch .touch_right .bf_af img:last-child {
+    width:64px; height:78px;
+    margin-top:-39px;
+}
+main .bg4 section .touch .touch_right .bf_af .bf, 
+main .bg4 section .touch .touch_right .bf_af .af {
+    display:flex; flex-flow:column nowrap; align-items:center;
+}
+main .bg4 section .touch .touch_right .bf_af .af {
+    margin-left:43px;
+}
+main .bg4 section .touch .touch_right .more_link {
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+}
+main .bg4 section .touch .touch_right .more_link span {font-size:1.25rem; font-weight:200; color:#e0e0e0;}
+/* 영상보러가기 버튼 디자인 */
+main .bg4 section .touch .touch_right .more_link button {
+    border:0; margin-top:30px; margin-bottom:0;
+}
+/* ================== 5. Pick1 ================== */
+main .bg5 {
+    background-image:url(../images/bg5.jpg);
+    padding:150px;
+}
+main .bg5 section {text-align:left;}
+main .bg5 section h2 {}
+/* ##### pick제목&내용 공통 적용 ##### */
+main .bg section .pick_title {color:#fff; font-size:4.375rem; font-weight:500; letter-spacing:-0.2px;}
+main .bg section .pick_title strong {font-weight:900;}
+main .bg section .pick_contents {color:#fff; font-size:2.5rem; letter-spacing:-0.2px; line-height:1.3; margin-top:40px;}
+main .bg section .pick_contents em {font-weight:700;}
+main .bg .item_wrap {margin-top:133px;}
+main .bg .item_wrap .item {}
+main .bg .item_wrap .item img {border-radius:15px;}

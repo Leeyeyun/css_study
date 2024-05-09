@@ -6,6 +6,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EPIK | 사진 보정앱</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/epik_logo.svg" type="image/x-icon">
+    <link rel="icon" href="./images/epik_logo.svg" type="image/x-icon">
     <!-- 웹글꼴 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +38,7 @@
         <div class="bg bg2">
             <section>
                 <div class="event_time">
-                    <h1>QUIZ</h1>
+                    <h1><span>QUIZ</span></h1>
                     <h2>퀴즈 풀고 EPIK에서 사용할 수 있는<br>쿠폰을 받아보세요!</h2>
                     <h3>퀴즈 종료까지</h3>
                     <div class="limit_time">
@@ -87,13 +90,15 @@
                     <h2><em>EPIK</em><span class="pro">Pro</span>에서만 경험할 수 있는<br>서비스를 지금 바로 시작해보세요!</h2>
                     <ul class="coupon_wrap">
                         <li>
+                            <a href="#" class="download"><img src="./images/download.svg" alt=""></a>
                             <h3>COUPON</h3>
-                            <p><em>EPIK</em><span class="pro">Pro</span>1개월 무료</p>
+                            <div class="coupon_contents"><em>EPIK</em><span class="pro">Pro</span>1개월 무료</div>
                             <p><del>월 5,500원</del><span>0원</span></p>
                         </li>
                         <li>
+                            <a href="#" class="download"><img src="./images/download.svg" alt=""></a>
                             <h3>COUPON</h3>
-                            <p><em>AI 아바타</em> 1회 무료</p>
+                            <div class="coupon_contents"><em>AI 아바타</em>1회 무료</div>
                             <p><del>1회 4,400원</del><span>0원</span></p>
                         </li>
                     </ul>
@@ -101,7 +106,45 @@
                 </div>
             </section>
         </div>
+        <!-- =============== 3. 배너 =============== -->
         <div class="bg bg3"></div>
+        <!-- =============== 4. 터치보정(영상) =============== -->
+        <div class="bg bg4">
+            <section>
+                <h2><strong>휘어지는 굴곡 없이</strong> 자연스러운 보정으로<br>완벽한 모습을 연출해보세요!</h2>
+                <div class="touch">
+                    <iframe class="video" width="440" height="782" src="https://www.youtube.com/embed/odc8MTAllkk?autoplay=1&mute=1&loop=1" title="요즘 난리난 보정어플 #epik #사진편집 #튜토리얼" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="touch_right">
+                        <h3><em class="pink_highlight">터치보정</em>으로 세밀한 보정!<br><em class="pink_highlight">복구툴</em>로 휘어진 배경 되돌리기!</h3>
+                        <ul class="bf_af">
+                            <li class="bf">
+                                <img src="./images/touch_bf.jpg" alt="터치보정">
+                                <img src="./images/touch_bf_icon.png" alt="터치보정버튼">
+                            </li>
+                            <li class="bf_to_af"><img src="./images/tripple_arrow_right.svg" alt=""></li>
+                            <li class="af">
+                                <img src="./images/touch_af.jpg" alt="복구">
+                                <img src="./images/touch_af_icon.png" alt="복구버튼">
+                            </li>
+                        </ul>
+                        <div class="more_link">
+                            <span>더 많은 보정 영상이 궁금하다면?</span>
+                            <button type="button">에픽 영상 보러가기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- =============== 5. Pick1 =============== -->
+        <div class="bg bg5">
+            <section>
+                <h2 class="pick_title"><strong>EPIK</strong>'s PICK 1</h2>
+                <p class="pick_contents">사진만 넣으면 완성되는 편한 <em>템플릿 기능</em>,<br>에픽이 선정한 <em>다양한 템플릿</em>들을 지금 만나보세요!</p>
+            </section>
+            <ul class="item_wrap">
+                <li class="item"><img src="./images/photo_1.jpg" alt=""></li>
+            </ul>
+        </div>
     </main>
 </body>
 </html>
