@@ -119,3 +119,24 @@ main .million .creator_character {
 }
 main .million .creator_character li {width:calc((100% - 32px) / 5);}
 main .million .creator_character li img {width:100%;}
+/* =============== 5. footer =============== */
+main .f_bg {background-color:#f5f5f5; padding:80px 0;}
+main .f_bg footer {max-width:1300px; margin:0 auto;}
+main .f_bg footer .f_top {
+    display:flex; justify-content:space-between; flex-flow:row nowrap; margin-bottom:24px;
+}
+main .f_bg footer .f_top .f_menu {}
+main .f_bg footer .f_top .f_menu a {margin-right:24px;}
+main .f_bg footer .f_top .f_menu a:last-child {margin-right:0;}
+main .f_bg footer .f_top .lang_sns {display:flex; justify-content:space-between; align-items:center;}
+main .f_bg footer .f_top .lang_sns #lang_select {
+    appearance:none; outline:none;
+    border-radius:5px; padding:0 10px; line-height:25px;
+    background-image:url(../images/arrow-down-solid.svg);
+    background-repeat:no-repeat;
+    background-size:10px;
+    background-position-y:6px; background-position-x:58px;
+}
+main .f_bg footer .f_top .lang_sns #lang_select option {}
+main .f_bg footer .f_top .lang_sns a {margin-left:12px;}
+main .f_bg footer .copy {}

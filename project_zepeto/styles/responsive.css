@@ -9,6 +9,7 @@
     main .million {width:100%;}
     main .million .creator_character li:last-child {display:none;}
     main .million .creator_character li {width:calc((100% - 32px) / 4);}
+    main .f_bg footer {padding:0 16px;}
 }/* ~1300px 이하일 때 */
 @media screen and (max-width:760px) {
     header h1 {width:225.75px;}
@@ -30,4 +31,6 @@
     main .million p {font-size:1rem;}
     main .million .creator_character li:nth-child(4) {display:none;}
     main .million .creator_character li {width:calc((100% - 32px) / 3);}
+    main .f_bg footer .f_top {flex-flow:column; align-items:flex-start;}
+    main .f_bg footer .f_top .f_menu {margin-bottom:15px;}
 }/* 760px 이하일 때 */
