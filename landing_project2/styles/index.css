@@ -306,7 +306,7 @@ main .bg section .pick_title {color:#fff; font-size:4.375rem; font-weight:500; l
 main .bg section .pick_title strong {font-weight:900;}
 main .bg section .pick_contents {color:#fff; font-size:2.5rem; letter-spacing:-0.2px; line-height:1.3; margin-top:40px;}
 main .bg section .pick_contents em {font-weight:700;}
-/* 템플릿 이미지 디자인 */
+/* 템플릿 이미지 디자인 정렬 */
 main .bg .item_wrap {
     width:100%;
     margin-top:133px;
@@ -360,3 +360,101 @@ main .bg6 section .wallpaper .wp_info h3 em {
 main .bg6 section .wallpaper .wp_info h3 strong {font-size:1.625rem; font-weight:700; margin:0 10px 0 15px;}
 main .bg6 section .wallpaper .wp_info h3 span {font-size:1.625rem;}
 main .bg6 section .wallpaper .wp_info p {font-size:1.25rem; line-height:1.7; margin-left:60px;}
+/* ================== 7. Pick3 ================== */
+main .bg7 {background-image:url(../images/bg7.jpg); padding:150px;}
+main .bg7 section {display:flex; justify-content:space-between;}
+main .bg7 section p {}
+main .bg7 section p img {}
+main .bg7 section .right {text-align:left; padding-top:50px;}
+/* ================== 8. Sticker ================== */
+main .bg8 {}
+main .bg8 section {overflow:hidden; padding: 0 0 150px;}
+main .bg8 section .img_top {
+    display:flex; justify-content:space-between; align-items: flex-end;
+}
+main .bg8 section .img_top img {}
+main .bg8 section .img_top .sticker_logo {}
+main .bg8 section .pick_contents {color:#000; margin:45px 0;}
+main .bg8 section .img_btm {
+    display:flex; justify-content:space-between;
+}
+main .bg8 section .img_btm img:nth-child(odd) {
+    position:relative; top:189px;
+}
+/* ================== 9. 모든 기능-둘러보기 ================== */
+main .bg9 {background-image:url(../images/bg9.jpg); height:2919px; padding:150px 0;}
+main .bg9 section {}
+main .bg9 section h1 {}
+main .bg9 section h1 img {}
+main .bg9 section .pick_contents {margin:35px 0 100px;}
+main .bg9 section p {}
+main .bg9 section p img {}
+main .bg9 section .sticker_wrap {
+    position:relative;
+}
+main .bg9 section .sticker_wrap img {
+    position:absolute; left:0; top:0;
+}
+main .bg9 section .sticker_wrap img:first-child {left:301px; top:-1566px;}
+main .bg9 section .sticker_wrap img:nth-child(2) {left:1071px; top:-1431px;}
+main .bg9 section .sticker_wrap img:nth-child(3) {left:-65px; top:-888px;}
+main .bg9 section .sticker_wrap img:nth-child(4) {left:335px; top:-500px;}
+main .bg9 section .sticker_wrap img:nth-child(5) {left:728px; top:-915px;}
+main .bg9 section .sticker_wrap img:nth-child(6) {left:1100px; top:-807px;}
+main .bg9 section .sticker_wrap img:nth-child(7) {left:1082px; top:-124px;}
+/* ================== 10. 이벤트 ================== */
+main .bg10 {padding:150px;}
+main .bg10 section {background-color:#191919; border-top-left-radius:1000px; border-top-right-radius:1000px; padding:0 32px;}
+/* event 디자인 */
+main .bg10 section .event_top {padding-top:150px;}
+main .bg10 section .event_top h1 {
+    font-size:3.75rem; font-weight:700; color:#fff;
+    letter-spacing:-0.2px;
+    width:345px; height:104px; background:linear-gradient(-60deg, #FF3A64, #6CF460);
+    border-radius:90px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto;
+}
+main .bg10 section .event_top h1 span {position:relative; bottom:5px;}
+/* event 제목 양옆 데코 가상선택자 */
+main .bg10 section .event_top h1::before {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    width:35px; height:35px;
+    margin-right:15px;
+}
+main .bg10 section .event_top h1::after {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    width:35px; height:35px;
+    margin-left:15px;
+}
+main .bg10 section .event_top p {
+    margin:34px 0 70px;
+    font-size:2.5rem; color:#fff; line-height:1.2;
+}
+main .bg10 section .event_top p strong {font-weight:700; color:#FF3A64;}
+main .bg10 section .event_top p em {font-weight:700;}
+/* 인스타그램 사진 정렬 */
+main .bg10 section .spring_wrap {
+    display:flex; justify-content:center; align-items:center;
+    width:100%; position:relative; left:5px;
+}
+main .bg10 section .spring_wrap img:nth-child(1),
+main .bg10 section .spring_wrap img:nth-child(2) {margin-right:-110px;}
+main .bg10 section .spring_wrap img:nth-child(3) {margin:0 auto;}
+main .bg10 section .spring_wrap img:nth-child(4),
+main .bg10 section .spring_wrap img:nth-child(5) {margin-left:-110px;}
+main .bg10 section .spring_wrap img:nth-child(1),
+main .bg10 section .spring_wrap img:nth-child(5) {position:relative; z-index:0;}
+main .bg10 section .spring_wrap img:nth-child(2),
+main .bg10 section .spring_wrap img:nth-child(4) {position:relative; z-index:1;}
+main .bg10 section .spring_wrap img:nth-child(3) {position:relative; z-index:2;}
+
+
+main .bg10 section .date_winner {}
+
