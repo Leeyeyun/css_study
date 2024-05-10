@@ -38,15 +38,15 @@
 }
 #app main .login_link em {font-weight:700;}
 /* ============ Main-Category ============ */
-#app main .category {
+/* #app main .category {
     padding:16px; height:181px;
     border:1px solid black;
     display:flex;
     flex-flow:row wrap;
     justify-content:space-between;
     align-content:space-between;
-}
-#app main .category li {
+} */
+/* #app main .category li {
     display:flex;
     flex-flow:column wrap;
     align-items:center;
@@ -58,14 +58,24 @@
     display:flex;
     flex-flow:column nowrap;
     align-items:center;
+} */
+/* grid 실습 */
+#app main .category {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:repeat(2, 1fr);
+    padding:16px; grid-gap:25px 0;
 }
+#app main .category li {}
+#app main .category li a {
+    display:grid; grid-gap:5px; justify-items:center;}
 #app main .category li a img {
     background-color:lightgray; width:42px; height:42px;
     margin-bottom:5px;
 }
 /* ============ Main-공지사항, 광고2 ============ */
 #app main .notice_event {
-    margin:16px 0; padding:10px 16px;
+    padding:10px 16px;
     border:1px solid black;
     display:flex;
     justify-content:left;

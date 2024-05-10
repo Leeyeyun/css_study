@@ -59,7 +59,7 @@
     margin:20px 16px 123px;
     background-color:gray; height:16px;
 }
-#app main .adver2 {
+/* #app main .adver2 {
     background-color:gray; height:100px; margin:0 16px 19px;
 }
 #app main .weather_g {
@@ -72,7 +72,24 @@
 #app main .weather_g li:first-child {margin-right:9px;}
 #app main .blog_g {
     margin:0 16px; height:135px; background-color:gray;
+} */
+/* ============ adver2 ~ blog_g (grid 버전 수정 20240510) */
+#app main .grid_container {
+    padding:0 16px;
+    grid-gap:10px;
+    display:grid;
+    grid-template-areas:
+        'item1 item1'
+        'item2 item3'
+        'item4 item4';
+    grid-template-rows:100px 66px 135px;
+    grid-template-columns:repeat(2, 1fr);
 }
+#app main .grid_container > * {background-color:gray;}
+#app main .grid_container .adver2 {grid-area:item1;}
+#app main .grid_container .weather1 {grid-area:item2;}
+#app main .grid_container .weather2 {grid-area:item3;}
+#app main .grid_container .blog_g {grid-area:item4;}
 /* ============ Nav ============ */
 #app nav a {
     border:1px solid black;
