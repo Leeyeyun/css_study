@@ -68,7 +68,7 @@ main .visual .visual_title .start_link:hover {
 }
 /* =============== main2. 크리에이터 =============== */
 main .creator {text-align:center; margin:150px auto; width:1300px;}
-main .creator h2 {font-size:3rem; font-weight:700;}
+main .creator h2 {font-size:3rem; font-weight:700; margin-bottom:55px;}
 main .creator p:nth-last-child(2) {font-size:1.25rem; line-height:1.5; margin:55px 0;}
 main .creator p:last-child {width:697px;}
 main .creator p img {width:100%;}
