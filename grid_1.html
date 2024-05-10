@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_1 | css3</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        /* grid(css3 반응형웹에 특화된 레이아웃 속성) */
+        /* flex : 한 방향 레이아웃(수평, 수직) */
+        /* grid : 2방향 레이아웃(수평, 수직 동시 설정 가능) */
+        .container {
+            background-color:gray;
+            display:grid;
+            /* grid item 크기는 부모에서 관리할 수 있다. */
+            /* 정렬된 행 개수에 따라 위->아래 크기 설정 */
+            /* grid-template-rows:50px 50px 100px 100px; */
+            /* grid-template-rows:50px repeat(3,100px); */
+            /* grid-template-rows:repeat(4,minmax(320px, 400px)); */
+            /* 열 정렬 */
+            /* grid-template-columns:50px 100px 100px; */
+            /* grid-template-rows:100px auto; */
+            /* grid 부모(container) 대상에 자식(item) 행, 열로 크기를 이용한 정렬배치를 할 경우, 그 대상이 누군지 구분하기가 어려운 부분을 자식에게 grid-area로 이름을 주는 것으로 해결한다. */
+            grid-template-areas:
+                'item1 item2'
+                'item1 item3'
+                'item1 item4';
+            grid-template-rows:repeat(3, 100px);
+            grid-template-columns:200px 300px;
+            justify-content:flex-end; align-content:center;
+            height:600px;
+        }
+        .container .item {
+            /* min-width:100px; max-width:200px; */
+            background-color:coral; border:1px solid red;
+        }
+        .container .item:nth-child(1) {grid-area:item1;}
+        .container .item:nth-child(2) {grid-area:item2;}
+        .container .item:nth-child(3) {grid-area:item3;}
+        .container .item:nth-child(4) {grid-area:item4;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>
