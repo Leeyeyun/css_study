@@ -1,4 +1,4 @@
-main {text-align:center; /* width:1920px; */}
+main {text-align:center; /* width:1920px; */ margin:0 auto;}
 /* 배경 공통&개별값 */
 main .bg > section {width:1250px; margin:0 auto;}
 main .bg {
@@ -255,6 +255,7 @@ main .bg2 section .event_coupon .coupon_wrap li p {font-size:1.625rem; font-weig
 main .bg2 section .event_coupon .coupon_wrap li p del {font-size:1.25rem; color:#636363; margin-right:14px;}
 main .bg2 section .event_coupon > p {font-size:1.25rem; color:#636363; margin-top:60px;}
 /* ================== 3. 배너 ================== */
+main .bg3 {background-size:auto;}
 /* ================== 4. 터치보정(영상) ================== */
 main .bg4 {background-color:#191919; padding:150px 0;}
 main .bg4 section {}
@@ -403,8 +404,8 @@ main .bg9 section .sticker_wrap img:nth-child(5) {left:728px; top:-915px;}
 main .bg9 section .sticker_wrap img:nth-child(6) {left:1100px; top:-807px;}
 main .bg9 section .sticker_wrap img:nth-child(7) {left:1082px; top:-124px;}
 /* ================== 10. 이벤트 ================== */
-main .bg10 {padding:150px;}
-main .bg10 section {background-color:#191919; border-top-left-radius:1000px; border-top-right-radius:1000px; padding:0 32px;}
+main .bg10 {padding:150px 0; padding-bottom:0;}
+main .bg10 section {background-color:#191919; border-top-left-radius:1000px; border-top-right-radius:1000px;}
 /* event 디자인 */
 main .bg10 section .event_top {padding-top:150px;}
 main .bg10 section .event_top h1 {
@@ -441,6 +442,7 @@ main .bg10 section .event_top p strong {font-weight:700; color:#FF3A64;}
 main .bg10 section .event_top p em {font-weight:700;}
 /* 인스타그램 사진 정렬 */
 main .bg10 section .spring_wrap {
+    padding:0 32px;
     display:flex; justify-content:center; align-items:center;
     width:100%; position:relative; left:5px;
 }
@@ -456,5 +458,96 @@ main .bg10 section .spring_wrap img:nth-child(4) {position:relative; z-index:1;}
 main .bg10 section .spring_wrap img:nth-child(3) {position:relative; z-index:2;}
 
 
-main .bg10 section .date_winner {}
-
+main .bg10 section .date_winner {text-align:left; margin:95px auto; display:inline-block;}
+main .bg10 section .date_winner dl {display:flex; justify-content:flex-start; align-items:center;}
+main .bg10 section .date_winner .event_date {}
+/* 이벤트기간&당첨 디자인 */
+main .bg10 section .date_winner dt {
+    margin-right:50px;
+    font-size:1.625rem; color:#fff;
+    padding:3px; background:linear-gradient(90deg, #6CF460, #FF3A64); border-radius:90px;
+    display:flex; /* justify-content:space-between; align-items:center; */
+}
+main .bg10 section .date_winner dt span {
+    padding:15px 20px; background-color:#191919; border-radius:90px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+main .bg10 section .date_winner dt span::before,
+main .bg10 section .winner_benefit h3 span::before {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    display:inline-block; margin-right:10px;
+    width:16px; height:16px; background-size:16px;
+}
+main .bg10 section .date_winner dt span::after,
+main .bg10 section .winner_benefit h3 span::after {
+    content:'';
+    background-image:url(../images/shine_deco.svg);
+    background-repeat:no-repeat;
+    display:inline-block; margin-left:10px;
+    width:16px; height:16px; background-size:16px;
+}
+main .bg10 section .date_winner dd {color:#fff; font-size:1.625rem; font-weight:500; letter-spacing:-0.2px;}
+main .bg10 section .date_winner .event_winner {margin-top:26px;}
+/* e:이벤트기간&당첨 디자인 */
+/* winner 혜택 디자인 */
+main .bg10 section .winner_benefit {}
+main .bg10 section .winner_benefit h3 {padding:3px 0; width:1078px; background:linear-gradient(90deg, #6CF460, #FF3A64); margin:0 auto;}
+main .bg10 section .winner_benefit h3 span {font-size:1.625rem; text-transform:uppercase; color:#fff; width:1078px; padding:15px; background-color:#191919; display:inline-block;}
+main .bg10 section .winner_benefit .benefit_wrap {
+    margin:70px 0; display:flex; justify-content:center; align-items:center;
+}
+main .bg10 section .winner_benefit .benefit_wrap .bf {
+    width:401px; background:linear-gradient(180deg, #FF3A64, #6CF460);
+    padding:3px; border-radius:15px;
+}
+main .bg10 section .winner_benefit .benefit_wrap .bf > div {width:100%; padding:30px; text-align:left; background-color:#fff; border-radius:15px;}
+main .bg10 section .winner_benefit .benefit_wrap .bf:first-child {margin-right:50px;}
+main .bg10 section .winner_benefit .benefit_wrap .bf p:first-child {
+    font-size:1.25rem; font-weight:700; color:#fff;
+    padding:0 30px; line-height:39px; border-radius:50px; background:linear-gradient(90deg, #FF3A64, #806BFB);
+    display:inline-block;
+}
+main .bg10 section .winner_benefit .benefit_wrap .bf p:nth-child(2) {font-size:1.875rem; line-height:1.2; margin:31px 0;}
+main .bg10 section .winner_benefit .benefit_wrap .bf p:last-child {color:#636363;}
+main .bg10 section .winner_benefit .benefit_wrap .bf p em {font-size:2.813rem; font-weight:700; letter-spacing:-0.2px;}
+main .bg10 section .winner_benefit .benefit_wrap .bf p span {
+    font-size:2.15rem; font-weight:700; letter-spacing:-0.2px; background:linear-gradient(90deg, #6CF460, #806BFB); display:inline-block;
+    padding:3px 20px 4px; border-radius:50px; color:#fff; position:relative; bottom:3px;
+}
+main .bg10 section .winner_benefit .benefit_wrap .bf p img {position:relative; bottom:3px;}
+/* e:winner 혜택 디자인 */
+/* 이벤트 유의사항 */
+main .bg10 section .event_caution {background-color:#000; padding:75px 305px; text-align:left;}
+main .bg10 section .event_caution h3 {color:#fff; font-size:1.125rem; font-weight:500; margin-bottom:30px;}
+main .bg10 section .event_caution p {color:#636363; line-height:2.0;}
+/* ================== 11. 마무리 배너 ================== */
+main .bg11 {
+    background-image:url(../images/bg11.jpg);
+    margin:0 auto; height:672px; background-size:auto;
+}
+/* ================== 12. footer ================== */
+footer {background-color:#191919; padding:60px 0;}
+footer section {width:1250px; margin:0 auto;}
+footer section .f_top {display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;}
+footer section .f_top p {color:#fff;}
+footer section .f_top .sns {display:flex; align-items:center;}
+footer section .f_top .sns a {margin-left:17px;}
+footer section .f_top .sns a img {}
+footer section .f_bottom > div {color:#fff; font-size:0.75rem; margin-bottom:12px;}
+footer section .f_bottom > p {color:#fff; font-size:0.75rem;}
+footer section .f_bottom .ad_top {}
+footer section .f_bottom .ad_top a {color:#fff;}
+footer section .f_bottom .ad_top a:nth-child(2) {
+    padding:0 7px; border-left:1.5px solid #fff; border-right:1.5px solid #fff;
+    display:inline-block; line-height:10px; margin:0 5px;
+}
+footer section .f_bottom .ad_mid {}
+footer section .f_bottom .ad_mid p {display:inline-block;}
+footer section .f_bottom .ad_mid p:nth-child(2) {
+    padding:0 7px; border-left:1.5px solid #fff; border-right:1.5px solid #fff;
+    display:inline-block; line-height:10px; margin:0 5px;
+}
+footer section .f_bottom .ad_mid p a {color:#fff;}
+footer section .f_bottom .ad_btm {}
