@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyframe | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .ball1 {
+            width:100px; height:100px; border-radius:50%; margin-bottom:50px;
+            background-color:coral;
+            animation:ball_fr 2s ease-in;
+        }
+        .ball2 {
+            animation:ball_fr2 2s linear;
+        }
+        .ball2 img {animation:ball_rotation 2s linear;}
+        @keyframes ball_fr {
+            0% {transform:translateX(0);}
+            100% {transform:translateX(500px);}
+        }
+        @keyframes ball_fr2 {
+            0% {transform:translate(0, 0);}
+            50% {transform:translate(250px, 100px);}
+            100% {transform:translate(500px, 0);}
+        }
+        @keyframes ball_rotation {
+            0% {transform:rotate(0);}
+            100% {transform:rotate(360deg);}
+        }
+        /* 
+            공 이동 애니메이션 제작 단계
+            1. 어디서 출발하는가?
+            2. 어떻게 움직이는가?
+            3. 어디서 도착하는가?
+            4. (최종) 앞 1~3 동작 빠르게 재생 결과
+         */
+        /* 축구공 게임 */
+        .game {
+            background-color:#269c26;
+            position:relative;
+            width:1000px; height:700px;
+            margin:30px auto;
+        }
+        /* 골대 공통 */
+        .game > img {position:absolute; width:200px; z-index:0;}
+        .game > .goal1 {left:20px; top:20px;}
+        .game > .goal2 {left:40%; bottom:20px;}
+        .game > .goal3 {right:20px; top:20px;}
+        .game > .soccer {
+            position:absolute; left:5px; top:10px;
+            animation:soccer_fr 1s linear 0.5s 2 alternate-reverse both;
+        }
+        .game > .soccer img {
+            position:absolute; z-index:5;
+            left:55px; top:100px;
+            animation:soccer_rota 1s linear infinite;
+        }
+        @keyframes soccer_fr {
+            0% {left:5px; top:10px;}
+            30% {left:395px; top:470px;}
+            100% {left:765px; top:10px;}
+            /* 100% {left:10px; top:10px;} */
+        }
+        @keyframes soccer_rota {
+            0% {transform:rotate(0);}
+            100% {transform:rotate(360deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="ball ball1"></div>
+    <div class="ball ball2">
+        <img src="https://cdn-icons-png.flaticon.com/128/1746/1746494.png" alt="">
+    </div>
+    <div class="game">
+        <div class="soccer"><img src="https://cdn-icons-png.flaticon.com/128/6223/6223745.png" alt=""></div>
+        <img src="https://cdn-icons-png.flaticon.com/128/13838/13838619.png" alt="" class="goal1">
+        <img src="https://cdn-icons-png.flaticon.com/128/13838/13838619.png" alt="" class="goal2">
+        <img src="https://cdn-icons-png.flaticon.com/128/13838/13838619.png" alt="" class="goal3">
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform | css</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <style>
+        .box {
+            width:100px; height:100px; margin:30px;
+            border:2px solid black;
+        }
+        .box:nth-child(odd) {background-color:aqua;}
+        .box:nth-child(even) {background-color:yellow;}
+        /* transform 크기, 회전, 기울기, 이동 등의 다양한 CSS3 변형기능 */
+        /* 속성:값; */
+        /* transform:부가속성(값) */
+        /* transform:크기(값); */
+        /* 지금까지의 크기 => width, height (px, %, calc()) */
+        /* transform:회전(값); */
+        /* transform:기울기(값); */
+        /* transform:이동(값); */
+        /* transform:크기(값) 회전(값) 기울기(값) 이동(값); */
+        .box1 {transform:scale(1.2); transition:transform 0.2s;}
+        .box2 {transform:scaleY(0.9); transform-origin:left top; transition:transform 0.3s;}
+        .box3 {transform:rotate(30deg); transition:transform 0.2s;}
+        .box4 {transform:skewX(40deg); transition:transform 0.2s;}
+        .box5 {
+            /* transform:translate(50px, -50px); */
+            /* transform:translateX(100px); */
+            transform:translateX(25px); transition:transform 0.5s;
+            /* translateY(-20px)를 position으로 작성하면? */
+            /* position:relative; top:-20px; */
+        }
+        .box6 {
+            transform:scaleY(1.0) rotate(10deg) translateX(50px) skewX(-20deg);
+            transition:transform 0.3s;
+        }
+        /* hover */
+        .box1:hover {transform:scale(1);}
+        .box2:hover {transform:scale(1.5);}
+        .box3:hover {transform:rotate(0);}
+        .box4:hover {transform:skewX(10deg);}
+        .box5:hover {transform:translateX(0);}
+        .box6:hover {transform:scaleY(2.0) rotate(0) translateX(50px) skewX(0);}
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+    <div class="box box6">6</div>
+</body>
+</html>
