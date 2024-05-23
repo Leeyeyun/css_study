@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이어트 계산기</title>
+    <link rel="stylesheet" href="./styles/diet.css">
+    <link rel="stylesheet" href="./styles/reset_diet.css">
+    <script src="./script/diet.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="diet">
+            <h1>뱃살의 민족</h1>
+            <p>적정 체중 계산기라 쓰고 현타 계산기라고 읽는다.</p>
+            <ul>
+                <li><p>현재 키는?</p> <input type="text" id="height"><span>센티미터</span></li>
+                <li><p>몸무게는?</p> <input type="text" id="weight"><span>킬로그램</span></li>
+            </ul>
+            <p><button type="button" id="result">측정 결과 확인하기</button></p>
+            <!-- <p class="goal_result"><input type="textarea" id="goals"></p> -->
+            <p class="goals_wrap"><textarea name="goals" id="goals" cols="30" rows="10" readonly></textarea></p>
+            <div class="image">
+                <img src="./images/baemin_character.gif" alt="">
+                <img src="./images/question.png" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
