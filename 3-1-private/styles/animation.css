@@ -1,0 +1,12 @@
+@keyframes rotation {
+    0% {rotate:0;}
+    100% {rotate:360deg;}
+}
+@keyframes mouse {
+    0% {transform:translateY(0);}
+    100% {transform:translateY(50px);}
+}
+@keyframes bg {
+    0% {background-position-x:0;}
+    100% {background-position-x:1000px;}
+}
